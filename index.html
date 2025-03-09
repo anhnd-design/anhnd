@@ -17,68 +17,60 @@
         .container {
             display: flex;
             width: 80%;
-            height: 80vh;
-            background-color: #FFFFFF;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
         }
         .sidebar {
-            width: 30%;
             background-color: #333333;
             color: #D9D9D9;
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            padding: 30px;
+            width: 30%;
+            position: relative;
         }
         .sidebar h1 {
             font-size: 40px;
-            margin: 0;
         }
-        .sidebar hr {
-            border: none;
-            height: 2px;
-            background-color: #D9D9D9;
-            margin: 20px 0;
-        }
-        .contact {
+        .sidebar p {
             font-size: 10px;
         }
+        .divider {
+            width: 2px;
+            height: 150px;
+            background-color: #D9D9D9;
+            position: absolute;
+            left: 20px;
+            top: 70px;
+        }
         .content {
-            flex: 1;
+            width: 70%;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr 1fr;
             gap: 20px;
-            padding: 40px;
+            padding: 30px;
         }
-        .box {
-            background-color: #FFFFFF;
-            border-radius: 10px;
-            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+        .card {
+            background-color: white;
             padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
         }
-        .box h2 {
+        .card h2 {
             font-size: 20px;
             color: #404040;
-            margin-bottom: 10px;
             display: flex;
             align-items: center;
-            gap: 10px;
         }
-        .box ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .card h2 img {
+            width: 20px;
+            margin-right: 10px;
         }
-        .box ul li {
+        .card a {
+            display: block;
             font-size: 16px;
             color: #404040;
+            text-decoration: none;
             margin: 5px 0;
         }
-        .icon {
-            width: 20px;
-            height: 20px;
-            filter: invert(40%);
+        .card a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -86,49 +78,39 @@
     <div class="container">
         <div class="sidebar">
             <h1>Sản phẩm</h1>
-            <hr>
-            <div class="contact">
-                <p>Nguyễn Duy Anh</p>
-                <p>📞 0972 173 972</p>
-                <p>📧 anhnd.design@gmail.com</p>
-            </div>
+            <div class="divider"></div>
+            <p>Nguyễn Duy Anh</p>
+            <p><img src="phone_icon.png" alt="Phone" style="width:12px; filter: invert(100%);"> 0972 173 972</p>
+            <p><img src="email_icon.png" alt="Email" style="width:12px; filter: invert(100%);"> anhnd.design@gmail.com</p>
         </div>
         <div class="content">
-            <div class="box">
-                <h2><img class="icon" src="slide_icon.png" alt="Slide"> Slide</h2>
-                <ul>
-                    <li>01. Tuyệt đỉnh Powerpoint</li>
-                    <li>02. Sản phẩm bảo hiểm</li>
-                    <li>03. Danh mục hồ sơ</li>
-                    <li>04. Bình đẳng giới</li>
-                </ul>
+            <div class="card">
+                <h2><img src="slide_icon.png" alt="Slide"> Slide</h2>
+                <a href="file1.pdf">01. Tuyệt đỉnh Powerpoint</a>
+                <a href="file2.pdf">02. Sản phẩm bảo hiểm</a>
+                <a href="file3.pdf">03. Danh mục hồ sơ</a>
+                <a href="file4.pdf">04. Bình đẳng giới</a>
             </div>
-            <div class="box">
-                <h2><img class="icon" src="video_icon.png" alt="Video"> Video</h2>
-                <ul>
-                    <li>01. Introduction</li>
-                    <li>02. Chúc mừng ngày 20-11</li>
-                    <li>03. Sản phẩm chứng khoán TT VN</li>
-                    <li>04. rCRM</li>
-                </ul>
+            <div class="card">
+                <h2><img src="video_icon.png" alt="Video"> Video</h2>
+                <a href="https://drive.google.com/file/d/13mJXPT0PJwPCLnOh19yR0P7c61m356oW/view?usp=sharing">01. Introduction</a>
+                <a href="https://drive.google.com/file/d/1oAihei3iG17I3Q9UQGRB9Lu3El4AAEMi/view?usp=sharing">02. Chúc mừng ngày 20-11</a>
+                <a href="https://drive.google.com/file/d/1vR3odIpXO6y1TjGASLB1OomQsplHU01z/view?usp=sharing">03. Sản phẩm chứng khoán TT VN</a>
+                <a href="https://drive.google.com/file/d/1vR3odIpXO6y1TjGASLB1OomQsplHU01z/view?usp=sharing">04. rCRM</a>
             </div>
-            <div class="box">
-                <h2><img class="icon" src="poster_icon.png" alt="Poster"> Poster</h2>
-                <ul>
-                    <li>01. Nâng cao năng lực GVNB</li>
-                    <li>02. rCRM</li>
-                    <li>03. Hướng dẫn chuyển tiền</li>
-                    <li>04. Nâng cao năng lực đầu tư</li>
-                </ul>
+            <div class="card">
+                <h2><img src="poster_icon.png" alt="Poster"> Poster</h2>
+                <a href="file5.pdf">01. Nâng cao năng lực GVNB</a>
+                <a href="file6.pdf">02. rCRM</a>
+                <a href="file7.pdf">03. Hướng dẫn chuyển tiền</a>
+                <a href="file8.pdf">04. Nâng cao năng lực đầu tư</a>
             </div>
-            <div class="box">
-                <h2><img class="icon" src="scorm_icon.png" alt="Scorm"> Scorm</h2>
-                <ul>
-                    <li>01. Pattern phổ biến</li>
-                    <li>02. Who Is the Millionaire</li>
-                    <li>03. CANSLIM</li>
-                    <li>04. Kéo thả PTCB PTKT</li>
-                </ul>
+            <div class="card">
+                <h2><img src="scorm_icon.png" alt="Scorm"> Scorm</h2>
+                <a href="https://anhnd7pattern.netlify.app/">01. Pattern phổ biến</a>
+                <a href="https://anhndmillionaire.netlify.app/">02. Who Is the Millionaire</a>
+                <a href="https://anhndcanslim.netlify.app/">03. CANSLIM</a>
+                <a href="https://anhndkeotha.netlify.app/">04. Kéo thả PTCB PTKT</a>
             </div>
         </div>
     </div>

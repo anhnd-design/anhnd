@@ -10,73 +10,58 @@
             background: url('Background.png') no-repeat center center fixed;
             background-size: cover;
             margin: 0;
-            display: flex;
             height: 100vh;
+            display: flex;
             justify-content: center;
             align-items: center;
         }
-        .container {
+        .content {
+            position: absolute;
             width: 80%;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
         }
-        .card {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .card h2 {
-            font-size: 20px;
+        h2 {
+            font-size: 24px;
             color: #000;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            margin-bottom: 10px;
         }
-        .card a {
+        a {
             display: block;
-            font-size: 16px;
+            font-size: 18px;
             font-style: italic;
             color: #404040;
             text-decoration: none;
             margin: 5px 0;
         }
-        .card a:hover {
+        a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="card">
-            <h2>Slide</h2>
-            <a href="file1.pdf">01. Tuyệt đỉnh Powerpoint</a>
-            <a href="file2.pdf">02. Sản phẩm bảo hiểm</a>
-            <a href="file3.pdf">03. Danh mục hồ sơ</a>
-            <a href="file4.pdf">04. Bình đẳng giới</a>
-        </div>
-        <div class="card">
-            <h2>Video</h2>
-            <a href="file5.pdf">01. Introduction</a>
-            <a href="file6.pdf">02. Chúc mừng ngày 20-11</a>
-            <a href="file7.pdf">03. Sản phẩm chứng khoán TT VN</a>
-            <a href="file8.pdf">04. rCRM</a>
-        </div>
-        <div class="card">
-            <h2>Poster</h2>
-            <a href="file9.pdf">01. Nâng cao năng lực GVNB</a>
-            <a href="file10.pdf">02. rCRM</a>
-            <a href="file11.pdf">03. Hướng dẫn chuyển tiền</a>
-            <a href="file12.pdf">04. Nâng cao năng lực đầu tư</a>
-        </div>
-        <div class="card">
-            <h2>Scorm</h2>
-            <a href="file13.pdf">01. Pattern phổ biến</a>
-            <a href="file14.pdf">02. Who Is the Millionaire</a>
-            <a href="file15.pdf">03. CANSLIM</a>
-            <a href="file16.pdf">04. Kéo thả PTCB PTKT</a>
-        </div>
+    <div class="content">
+        <h2>Slide</h2>
+        <a href="file1.pdf">01. Tuyệt đỉnh Powerpoint</a>
+        <a href="file2.pdf">02. Sản phẩm bảo hiểm</a>
+        <a href="file3.pdf">03. Danh mục hồ sơ</a>
+        <a href="file4.pdf">04. Bình đẳng giới</a>
+        
+        <h2>Video</h2>
+        <a href="file5.pdf">01. Introduction</a>
+        <a href="file6.pdf">02. Chúc mừng ngày 20-11</a>
+        <a href="file7.pdf">03. Sản phẩm chứng khoán TT VN</a>
+        <a href="file8.pdf">04. rCRM</a>
+        
+        <h2>Poster</h2>
+        <a href="file9.pdf">01. Nâng cao năng lực GVNB</a>
+        <a href="file10.pdf">02. rCRM</a>
+        <a href="file11.pdf">03. Hướng dẫn chuyển tiền</a>
+        <a href="file12.pdf">04. Nâng cao năng lực đầu tư</a>
+        
+        <h2>Scorm</h2>
+        <a href="file13.pdf">01. Pattern phổ biến</a>
+        <a href="file14.pdf">02. Who Is the Millionaire</a>
+        <a href="file15.pdf">03. CANSLIM</a>
+        <a href="file16.pdf">04. Kéo thả PTCB PTKT</a>
     </div>
 </body>
 </html>

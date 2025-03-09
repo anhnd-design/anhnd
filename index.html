@@ -1,101 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: Cambria, serif;
+            background-color: #F2F2F2;
             margin: 0;
-            padding: 0;
-        }
-        .header {
-            background: linear-gradient(135deg, #0044cc, #002266);
-            color: white;
-            text-align: center;
-            padding: 30px 10px;
-            font-size: 24px;
-            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         .container {
+            display: flex;
             width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        .folder {
-            background: white;
-            margin: 20px 0;
-            padding: 20px;
+            height: 80vh;
+            background-color: #FFFFFF;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .folder h2 {
-            color: #0044cc;
+        .sidebar {
+            width: 30%;
+            background-color: #333333;
+            color: #D9D9D9;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        .folder ul {
-            list-style: none;
-            padding: 0;
+        .sidebar h1 {
+            font-size: 40px;
+            margin: 0;
         }
-        .folder ul li {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
+        .sidebar hr {
+            border: none;
+            height: 2px;
+            background-color: #D9D9D9;
+            margin: 20px 0;
         }
-        .folder ul li a {
-            text-decoration: none;
-            color: #333;
+        .contact {
+            font-size: 10px;
+        }
+        .content {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 40px;
+        }
+        .box {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .box h2 {
+            font-size: 20px;
+            color: #404040;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
+            gap: 10px;
         }
-        .folder ul li a:hover {
-            color: #0044cc;
+        .box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .box ul li {
+            font-size: 16px;
+            color: #404040;
+            margin: 5px 0;
         }
         .icon {
-            margin-right: 10px;
-            color: #0044cc;
+            width: 20px;
+            height: 20px;
+            filter: invert(40%);
         }
     </style>
 </head>
 <body>
-    <div class="header">My Portfolio</div>
     <div class="container">
-        <div class="folder">
-            <h2><i class="fa-solid fa-file-powerpoint icon"></i> 01_Slide</h2>
-            <ul>
-                <li><a href="#">01_Tuyet_dinh_Powerpoint.pdf</a></li>
-                <li><a href="#">02_San_pham_bao_hiem.pdf</a></li>
-                <li><a href="#">03_Danh_muc_ho_so.pdf</a></li>
-                <li><a href="#">04_Binh_dang_gioi.pdf</a></li>
-            </ul>
+        <div class="sidebar">
+            <h1>Sản phẩm</h1>
+            <hr>
+            <div class="contact">
+                <p>Nguyễn Duy Anh</p>
+                <p>📞 0972 173 972</p>
+                <p>📧 anhnd.design@gmail.com</p>
+            </div>
         </div>
-        <div class="folder">
-            <h2><i class="fa-solid fa-video icon"></i> 02_Video</h2>
-            <ul>
-                <li><a href="https://drive.google.com/file/d/13mJXPT0PJwPCLnOh19yR0P7c61m356oW/view?usp=sharing">01. Introduction</a></li>
-                <li><a href="https://drive.google.com/file/d/1oAihei3iG17I3Q9UQGRB9Lu3El4AAEMi/view?usp=sharing">02. Chúc mừng ngày 20-11</a></li>
-                <li><a href="https://drive.google.com/file/d/1vR3odIpXO6y1TjGASLB1OomQsplHU01z/view?usp=sharing">03. Sản phẩm chứng khoán TT Việt Nam</a></li>
-                <li><a href="https://drive.google.com/file/d/1vR3odIpXO6y1TjGASLB1OomQsplHU01z/view?usp=sharing">04. rCRM</a></li>
-            </ul>
-        </div>
-        <div class="folder">
-            <h2><i class="fa-solid fa-image icon"></i> 03_Poster</h2>
-            <ul>
-                <li><a href="#">01_Poster_A.png</a></li>
-                <li><a href="#">02_Poster_B.png</a></li>
-            </ul>
-        </div>
-        <div class="folder">
-            <h2><i class="fa-solid fa-gamepad icon"></i> 04_Scorm</h2>
-            <ul>
-                <li><a href="https://anhnd7pattern.netlify.app/">01. Pattern phổ biến</a></li>
-                <li><a href="https://anhndmillionaire.netlify.app/">02. Who Is the Millionaire</a></li>
-                <li><a href="https://anhndcanslim.netlify.app/">03. CANSLIM</a></li>
-                <li><a href="https://anhndkeotha.netlify.app/">04. Kéo thả PTCB PTKT</a></li>
-            </ul>
+        <div class="content">
+            <div class="box">
+                <h2><img class="icon" src="slide_icon.png" alt="Slide"> Slide</h2>
+                <ul>
+                    <li>01. Tuyệt đỉnh Powerpoint</li>
+                    <li>02. Sản phẩm bảo hiểm</li>
+                    <li>03. Danh mục hồ sơ</li>
+                    <li>04. Bình đẳng giới</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2><img class="icon" src="video_icon.png" alt="Video"> Video</h2>
+                <ul>
+                    <li>01. Introduction</li>
+                    <li>02. Chúc mừng ngày 20-11</li>
+                    <li>03. Sản phẩm chứng khoán TT VN</li>
+                    <li>04. rCRM</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2><img class="icon" src="poster_icon.png" alt="Poster"> Poster</h2>
+                <ul>
+                    <li>01. Nâng cao năng lực GVNB</li>
+                    <li>02. rCRM</li>
+                    <li>03. Hướng dẫn chuyển tiền</li>
+                    <li>04. Nâng cao năng lực đầu tư</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2><img class="icon" src="scorm_icon.png" alt="Scorm"> Scorm</h2>
+                <ul>
+                    <li>01. Pattern phổ biến</li>
+                    <li>02. Who Is the Millionaire</li>
+                    <li>03. CANSLIM</li>
+                    <li>04. Kéo thả PTCB PTKT</li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>

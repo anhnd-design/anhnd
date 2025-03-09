@@ -24,20 +24,25 @@
             padding: 30px;
             width: 30%;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
         }
         .sidebar h1 {
             font-size: 40px;
         }
         .sidebar p {
             font-size: 10px;
+            margin: 5px 0;
         }
         .divider {
             width: 2px;
-            height: 150px;
+            height: 100%;
             background-color: #D9D9D9;
             position: absolute;
             left: 20px;
-            top: 70px;
+            top: 0;
         }
         .content {
             width: 70%;
@@ -55,12 +60,6 @@
         .card h2 {
             font-size: 20px;
             color: #404040;
-            display: flex;
-            align-items: center;
-        }
-        .card h2 img {
-            width: 20px;
-            margin-right: 10px;
         }
         .card a {
             display: block;
@@ -79,34 +78,36 @@
         <div class="sidebar">
             <h1>Sản phẩm</h1>
             <div class="divider"></div>
-            <p>Nguyễn Duy Anh</p>
-            <p><img src="phone_icon.png" alt="Phone" style="width:12px; filter: invert(100%);"> 0972 173 972</p>
-            <p><img src="email_icon.png" alt="Email" style="width:12px; filter: invert(100%);"> anhnd.design@gmail.com</p>
+            <div>
+                <p>Nguyễn Duy Anh</p>
+                <p>0972 173 972</p>
+                <p>anhnd.design@gmail.com</p>
+            </div>
         </div>
         <div class="content">
             <div class="card">
-                <h2><img src="slide_icon.png" alt="Slide"> Slide</h2>
+                <h2>Slide</h2>
                 <a href="file1.pdf">01. Tuyệt đỉnh Powerpoint</a>
                 <a href="file2.pdf">02. Sản phẩm bảo hiểm</a>
                 <a href="file3.pdf">03. Danh mục hồ sơ</a>
                 <a href="file4.pdf">04. Bình đẳng giới</a>
             </div>
             <div class="card">
-                <h2><img src="video_icon.png" alt="Video"> Video</h2>
+                <h2>Video</h2>
                 <a href="https://drive.google.com/file/d/13mJXPT0PJwPCLnOh19yR0P7c61m356oW/view?usp=sharing">01. Introduction</a>
                 <a href="https://drive.google.com/file/d/1oAihei3iG17I3Q9UQGRB9Lu3El4AAEMi/view?usp=sharing">02. Chúc mừng ngày 20-11</a>
                 <a href="https://drive.google.com/file/d/1vR3odIpXO6y1TjGASLB1OomQsplHU01z/view?usp=sharing">03. Sản phẩm chứng khoán TT VN</a>
                 <a href="https://drive.google.com/file/d/1vR3odIpXO6y1TjGASLB1OomQsplHU01z/view?usp=sharing">04. rCRM</a>
             </div>
             <div class="card">
-                <h2><img src="poster_icon.png" alt="Poster"> Poster</h2>
+                <h2>Poster</h2>
                 <a href="file5.pdf">01. Nâng cao năng lực GVNB</a>
                 <a href="file6.pdf">02. rCRM</a>
                 <a href="file7.pdf">03. Hướng dẫn chuyển tiền</a>
                 <a href="file8.pdf">04. Nâng cao năng lực đầu tư</a>
             </div>
             <div class="card">
-                <h2><img src="scorm_icon.png" alt="Scorm"> Scorm</h2>
+                <h2>Scorm</h2>
                 <a href="https://anhnd7pattern.netlify.app/">01. Pattern phổ biến</a>
                 <a href="https://anhndmillionaire.netlify.app/">02. Who Is the Millionaire</a>
                 <a href="https://anhndcanslim.netlify.app/">03. CANSLIM</a>

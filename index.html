@@ -1,96 +1,100 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
             color: #333;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+        }
+        .header {
+            background: linear-gradient(135deg, #0044cc, #002266);
+            color: white;
+            text-align: center;
+            padding: 30px 10px;
+            font-size: 24px;
+            font-weight: bold;
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #003366;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
         }
         .folder {
-            margin-bottom: 20px;
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .folder h2 {
-            background: #003366;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
+            color: #0044cc;
         }
-        ul {
+        .folder ul {
             list-style: none;
             padding: 0;
         }
-        li {
-            margin: 5px 0;
+        .folder ul li {
             padding: 10px;
-            background: #ddd;
-            border-radius: 5px;
+            border-bottom: 1px solid #ddd;
         }
-        a {
+        .folder ul li a {
             text-decoration: none;
-            color: #003366;
-            font-weight: bold;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+        .folder ul li a:hover {
+            color: #0044cc;
+        }
+        .icon {
+            margin-right: 10px;
+            color: #0044cc;
         }
     </style>
 </head>
 <body>
+    <div class="header">My Portfolio</div>
     <div class="container">
-        <h1>Portfolio</h1>
-        
         <div class="folder">
-            <h2>01. Slide</h2>
+            <h2><i class="fa-solid fa-file-powerpoint icon"></i> 01_Slide</h2>
             <ul>
-                <li><a href="01_Slide/01_Tuyet_dinh_Powerpoint.pdf">01. Tuyệt đỉnh Powerpoint</a></li>
-                <li><a href="01_Slide/02_San_pham_bao_hiem.pdf">02. Sản phẩm bảo hiểm</a></li>
-                <li><a href="01_Slide/03_Danh_muc_ho_so.pdf">03. Danh mục hồ sơ</a></li>
-                <li><a href="01_Slide/04_Binh_dang_gioi.pdf">04. Bình đẳng giới</a></li>
+                <li><a href="#">01_Tuyet_dinh_Powerpoint.pdf</a></li>
+                <li><a href="#">02_San_pham_bao_hiem.pdf</a></li>
+                <li><a href="#">03_Danh_muc_ho_so.pdf</a></li>
+                <li><a href="#">04_Binh_dang_gioi.pdf</a></li>
             </ul>
         </div>
-        
         <div class="folder">
-            <h2>02. Video</h2>
+            <h2><i class="fa-solid fa-video icon"></i> 02_Video</h2>
             <ul>
-                <li><a href="https://drive.google.com/file/d/13mJXPT0PJwPCLnOh19yR0P7c61m356oW/view?usp=sharing" target="_blank">01. Introduction</a></li>
-                <li><a href="https://drive.google.com/file/d/1oAihei3iG17I3Q9UQGRB9Lu3El4AAEMi/view?usp=sharing" target="_blank">02. Chúc mừng ngày 20-11</a></li>
-                <li><a href="https://drive.google.com/file/d/1vR3odIpXO6y1TjGASLB1OomQsplHU01z/view?usp=sharing" target="_blank">03. Sản phẩm chứng khoán TT Việt Nam</a></li>
-                <li><a href="https://drive.google.com/file/d/1vR3odIpXO6y1TjGASLB1OomQsplHU01z/view?usp=sharing" target="_blank">04. rCRM</a></li>
+                <li><a href="https://drive.google.com/file/d/13mJXPT0PJwPCLnOh19yR0P7c61m356oW/view?usp=sharing">01. Introduction</a></li>
+                <li><a href="https://drive.google.com/file/d/1oAihei3iG17I3Q9UQGRB9Lu3El4AAEMi/view?usp=sharing">02. Chúc mừng ngày 20-11</a></li>
+                <li><a href="https://drive.google.com/file/d/1vR3odIpXO6y1TjGASLB1OomQsplHU01z/view?usp=sharing">03. Sản phẩm chứng khoán TT Việt Nam</a></li>
+                <li><a href="https://drive.google.com/file/d/1vR3odIpXO6y1TjGASLB1OomQsplHU01z/view?usp=sharing">04. rCRM</a></li>
             </ul>
         </div>
-        
         <div class="folder">
-            <h2>03. Poster</h2>
+            <h2><i class="fa-solid fa-image icon"></i> 03_Poster</h2>
             <ul>
-                <li><a href="03_Poster/01_Nang_cao_nang_luc_Giang_vien_noi_bo.png">01. Nâng cao năng lực Giảng viên nội bộ</a></li>
-                <li><a href="03_Poster/02_rCRM.png">02. rCRM</a></li>
-                <li><a href="03_Poster/03_Huong_dan_chuyen_tien.png">03. Hướng dẫn chuyển tiền</a></li>
-                <li><a href="03_Poster/04_Nang_cao_nang_luc_dau_tu.png">04. Nâng cao năng lực đầu tư</a></li>
+                <li><a href="#">01_Poster_A.png</a></li>
+                <li><a href="#">02_Poster_B.png</a></li>
             </ul>
         </div>
-        
         <div class="folder">
-            <h2>04. Scorm</h2>
+            <h2><i class="fa-solid fa-gamepad icon"></i> 04_Scorm</h2>
             <ul>
-                <li><a href="https://anhnd7pattern.netlify.app/" target="_blank">01. Pattern phổ biến</a></li>
-                <li><a href="https://anhndmillionaire.netlify.app/" target="_blank">02. Who Is the Millionaire</a></li>
-                <li><a href="https://anhndcanslim.netlify.app/" target="_blank">03. CANSLIM</a></li>
-                <li><a href="https://anhndkeotha.netlify.app/" target="_blank">04. Kéo thả PTCB PTKT</a></li>
+                <li><a href="https://anhnd7pattern.netlify.app/">01. Pattern phổ biến</a></li>
+                <li><a href="https://anhndmillionaire.netlify.app/">02. Who Is the Millionaire</a></li>
+                <li><a href="https://anhndcanslim.netlify.app/">03. CANSLIM</a></li>
+                <li><a href="https://anhndkeotha.netlify.app/">04. Kéo thả PTCB PTKT</a></li>
             </ul>
         </div>
     </div>

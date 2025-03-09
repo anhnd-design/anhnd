@@ -4,43 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 text-gray-900">
-    <div class="max-w-4xl mx-auto p-6">
-        <h1 class="text-4xl font-bold mb-6 text-center">📁 Portfolio</h1>
-        
-        <div id="file-list" class="space-y-6"></div>
-    </div>
-
-    <script>
-        const folders = ["Slide", "Poster", "Video", "Scorm"];
-        const icons = {"pdf": "📄", "jpg": "🖼️", "png": "🖼️", "mp4": "🎬", "html": "📚", "zip": "📦"};
-
-        function getFiles(folder, files) {
-            let list = `<h2 class='text-2xl font-semibold mt-4'>📂 ${folder}</h2><ul class='bg-white shadow-md rounded-lg p-4'>`;
-            if (files.length === 0) {
-                list += "<li class='text-gray-500'>Không có file nào.</li>";
-            } else {
-                files.forEach(file => {
-                    let ext = file.split('.').pop();
-                    let icon = icons[ext] || "📁";
-                    list += `<li class='border-b py-2'><a href='${basePath}${folder}/${file}' class='text-blue-600 hover:underline'>${icon} ${file}</a></li>`;
-                });
-            }
-            list += "</ul>";
-            return list;
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
         }
-
-        // Giả lập danh sách file (cần thay bằng API nếu có backend)
-        const fileData = {
-            "Slide": ["slide1.pdf", "slide2.pdf"],
-            "Poster": ["poster1.jpg", "poster2.png"],
-            "Video": ["video1.mp4", "video2.mp4"],
-            "Scorm": ["index.html", "lesson1.zip"]
-        };
-
-        document.getElementById("file-list").innerHTML = folders.map(folder => getFiles(folder, fileData[folder])).join('');
-    </script>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #003366;
+        }
+        .folder {
+            margin-bottom: 20px;
+        }
+        .folder h2 {
+            background: #003366;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+            padding: 10px;
+            background: #ddd;
+            border-radius: 5px;
+        }
+        a {
+            text-decoration: none;
+            color: #003366;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Portfolio</h1>
+        
+        <div class="folder">
+            <h2>01_Slide</h2>
+            <ul>
+                <li><a href="01_Slide/01_Tuyet_dinh_Powerpoint.pdf">01_Tuyet_dinh_Powerpoint.pdf</a></li>
+                <li><a href="01_Slide/02_San_pham_bao_hiem.pdf">02_San_pham_bao_hiem.pdf</a></li>
+                <li><a href="01_Slide/03_Danh_muc_ho_so.pdf">03_Danh_muc_ho_so.pdf</a></li>
+                <li><a href="01_Slide/04_Binh_dang_gioi.pdf">04_Binh_dang_gioi.pdf</a></li>
+            </ul>
+        </div>
+        
+        <div class="folder">
+            <h2>02_Video</h2>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/13mJXPT0PJwPCLnOh19yR0P7c61m356oW/view?usp=sharing" target="_blank">01. Introduction</a></li>
+                <li><a href="https://drive.google.com/file/d/1oAihei3iG17I3Q9UQGRB9Lu3El4AAEMi/view?usp=sharing" target="_blank">02. Chúc mừng ngày 20-11</a></li>
+                <li><a href="https://drive.google.com/file/d/1vR3odIpXO6y1TjGASLB1OomQsplHU01z/view?usp=sharing" target="_blank">03. Sản phẩm chứng khoán TT Việt Nam</a></li>
+                <li><a href="https://drive.google.com/file/d/1vR3odIpXO6y1TjGASLB1OomQsplHU01z/view?usp=sharing" target="_blank">04. rCRM</a></li>
+            </ul>
+        </div>
+        
+        <div class="folder">
+            <h2>03_Poster</h2>
+            <ul>
+                <li><a href="03_Poster/01_Tuyet_dinh_Powerpoint.pdf">01_Tuyet_dinh_Powerpoint.pdf</a></li>
+                <li><a href="03_Poster/02_San_pham_bao_hiem.pdf">02_San_pham_bao_hiem.pdf</a></li>
+                <li><a href="03_Poster/03_Danh_muc_ho_so.pdf">03_Danh_muc_ho_so.pdf</a></li>
+                <li><a href="03_Poster/04_Binh_dang_gioi.pdf">04_Binh_dang_gioi.pdf</a></li>
+            </ul>
+        </div>
+        
+        <div class="folder">
+            <h2>04_Scorm</h2>
+            <ul>
+                <li><a href="https://anhnd7pattern.netlify.app/" target="_blank">01. Pattern phổ biến</a></li>
+                <li><a href="https://anhndmillionaire.netlify.app/" target="_blank">02. Who Is the Millionaire</a></li>
+                <li><a href="https://anhndcanslim.netlify.app/" target="_blank">03. CANSLIM</a></li>
+                <li><a href="https://anhndkeotha.netlify.app/" target="_blank">04. Kéo thả PTCB PTKT</a></li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>

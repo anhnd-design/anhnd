@@ -5,47 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio</title>
     <style>
-        /* Đảm bảo trang web luôn vừa với bề ngang điện thoại */
-        html, body {
-            width: 100vw;
-            height: auto;
+        /* Đảm bảo trang web không có thanh cuộn */
+        body, html {
             margin: 0;
             padding: 0;
-            overflow-x: hidden; /* Không cho cuộn ngang */
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden; /* Không cho cuộn ngang/dọc */
             display: flex;
-            justify-content: center; /* Căn giữa nội dung */
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f8f8; /* Màu nền nhẹ */
         }
 
-        /* Định dạng nội dung chính */
+        /* Vùng chứa nội dung */
         .container {
-            width: 1024px; /* Chiều rộng chuẩn */
-            height: auto;
+            width: 1024px;  /* Kích thước gốc của nội dung */
+            height: 768px;  /* Chiều cao gốc */
+            transform-origin: top left;
         }
 
-        /* Scale trang web sao cho vừa bề ngang điện thoại */
-        @media screen and (max-width: 1024px) {
+        /* Scale theo tỉ lệ phù hợp với màn hình */
+        @media (max-aspect-ratio: 1024/768) { /* Nếu màn hình cao hơn */
             .container {
-                transform: scale(calc(100vw / 1024)); /* Co lại theo bề ngang */
-                transform-origin: top left;
+                transform: scale(calc(100vw / 1024));
+            }
+        }
+        @media (min-aspect-ratio: 1024/768) { /* Nếu màn hình rộng hơn */
+            .container {
+                transform: scale(calc(100vh / 768));
             }
         }
 
-        /* Định dạng chung */
-        body {
-            font-family: Cambria, serif;
-            background: url('Background.png') no-repeat center center fixed;
-            background-size: cover;
-        }
-
-        /* Các Box chứa link */
+        /* Văn bản */
         .text-box {
             position: absolute;
             font-size: 16px;
             color: #404040;
             font-style: italic;
+            white-space: nowrap;
         }
 
-        /* Vị trí các box */
+        /* Định vị text */
         .text-box-11 { left: 380px; top: 80px; }
         .text-box-12 { left: 380px; top: 100px; }
         .text-box-13 { left: 380px; top: 120px; }

@@ -2,73 +2,66 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1024, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio</title>
     <style>
+        /* Căn chỉnh để trang luôn vừa với bề ngang điện thoại */
+        html, body {
+            width: 100vw; /* Chiều rộng 100% theo màn hình */
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Không cho phép cuộn ngang */
+            display: flex;
+            justify-content: center; /* Căn giữa nội dung */
+            align-items: center; /* Căn giữa dọc */
+            transform: scale(1);
+            transform-origin: top left;
+        }
+
+        /* Bọc nội dung vào container cố định tỷ lệ */
+        .container {
+            width: 1024px; /* Kích thước chuẩn như PC */
+            height: auto;
+            transform: scale(1);
+            transform-origin: top left;
+        }
+
+        /* Cố định tỷ lệ trang trên điện thoại */
+        @media screen and (max-width: 1024px) {
+            .container {
+                transform: scale(calc(100vw / 1024));
+                transform-origin: top left;
+            }
+        }
+
+        /* Định dạng chung */
         body {
             font-family: Cambria, serif;
             background: url('Background.png') no-repeat center center fixed;
             background-size: cover;
-            margin: 0;
-            height: 100vh;
-            width: 1024px; /* Khóa chiều rộng */
-            min-width: 1024px;
-            overflow-x: auto; /* Cho phép cuộn ngang */
         }
 
-        /* Box1 */
-        .text-box-11, .text-box-12, .text-box-13, .text-box-14 {
+        /* Các Box chứa link */
+        .text-box {
             position: absolute;
-            left: 380px;
             font-size: 16px;
             color: #404040;
             font-style: italic;
         }
-        .text-box-11 { top: 80px; }
-        .text-box-12 { top: 100px; }
-        .text-box-13 { top: 120px; }
-        .text-box-14 { top: 140px; }
 
-        /* Box2 */
-        .text-box-21, .text-box-22, .text-box-23, .text-box-24 {
-            position: absolute;
-            left: 680px;
-            font-size: 16px;
-            color: #404040;
-            font-style: italic;
-        }
-        .text-box-21 { top: 80px; }
-        .text-box-22 { top: 100px; }
-        .text-box-23 { top: 120px; }
-        .text-box-24 { top: 140px; }
+        /* Vị trí các box */
+        .text-box-11 { left: 380px; top: 80px; }
+        .text-box-12 { left: 380px; top: 100px; }
+        .text-box-13 { left: 380px; top: 120px; }
+        .text-box-14 { left: 380px; top: 140px; }
 
-        /* Box3 */
-        .text-box-31, .text-box-32, .text-box-33, .text-box-34 {
-            position: absolute;
-            left: 380px;
-            font-size: 16px;
-            color: #404040;
-            font-style: italic;
-        }
-        .text-box-31 { top: 240px; }
-        .text-box-32 { top: 260px; }
-        .text-box-33 { top: 280px; }
-        .text-box-34 { top: 300px; }
+        .text-box-21 { left: 680px; top: 80px; }
+        .text-box-22 { left: 680px; top: 100px; }
+        .text-box-23 { left: 680px; top: 120px; }
+        .text-box-24 { left: 680px; top: 140px; }
 
-        /* Box4 */
-        .text-box-41, .text-box-42, .text-box-43, .text-box-44 {
-            position: absolute;
-            left: 680px;
-            font-size: 16px;
-            color: #404040;
-            font-style: italic;
-        }
-        .text-box-41 { top: 240px; }
-        .text-box-42 { top: 260px; }
-        .text-box-43 { top: 280px; }
-        .text-box-44 { top: 300px; }
-
-        /* Link Styles */
+        /* Style cho link */
         a {
             text-decoration: none;
             color: #404040;
@@ -80,28 +73,18 @@
     </style>
 </head>
 <body>
-    <!-- Box 1 -->
-    <div class="text-box-11"><a href="01_Slide/01_Tuyet_dinh_Powerpoint.pdf" target="_blank">01. Tuyệt đỉnh Powerpoint</a></div>
-    <div class="text-box-12"><a href="01_Slide/02_San_pham_bao_hiem.pdf" target="_blank">02. Sản phẩm bảo hiểm</a></div>
-    <div class="text-box-13"><a href="01_Slide/03_Danh_muc_ho_so.pdf" target="_blank">03. Danh mục hồ sơ</a></div>
-    <div class="text-box-14"><a href="01_Slide/04_Binh_dang_gioi.pdf" target="_blank">04. Bình đẳng giới</a></div>
+    <div class="container">
+        <!-- Box 1 -->
+        <div class="text-box text-box-11"><a href="01_Slide/01_Tuyet_dinh_Powerpoint.pdf" target="_blank">01. Tuyệt đỉnh Powerpoint</a></div>
+        <div class="text-box text-box-12"><a href="01_Slide/02_San_pham_bao_hiem.pdf" target="_blank">02. Sản phẩm bảo hiểm</a></div>
+        <div class="text-box text-box-13"><a href="01_Slide/03_Danh_muc_ho_so.pdf" target="_blank">03. Danh mục hồ sơ</a></div>
+        <div class="text-box text-box-14"><a href="01_Slide/04_Binh_dang_gioi.pdf" target="_blank">04. Bình đẳng giới</a></div>
 
-    <!-- Box 2 -->
-    <div class="text-box-21"><a href="https://drive.google.com/file/d/13mJXPT0PJwPCLnOh19yR0P7c61m356oW/view?usp=sharing" target="_blank">01. Introduction</a></div>
-    <div class="text-box-22"><a href="https://drive.google.com/file/d/1oAihei3iG17I3Q9UQGRB9Lu3El4AAEMi/view?usp=sharing" target="_blank">02. Chúc mừng ngày 20-11</a></div>
-    <div class="text-box-23"><a href="https://drive.google.com/file/d/1vR3odIpXO6y1TjGASLB1OomQsplHU01z/view?usp=sharing" target="_blank">03. Sản phẩm chứng khoán TT Việt Nam</a></div>
-    <div class="text-box-24"><a href="https://drive.google.com/file/d/1DS-BVvkySfYw8MlRbxbbkc7l_6Sg6HDn/view?usp=sharing" target="_blank">04. rCRM</a></div>
-
-    <!-- Box 3 -->
-    <div class="text-box-31"><a href="03_Poster/01_Nang_cao_nang_luc_Giang_vien_noi_bo.png" target="_blank">01. Nâng cao năng lực Giảng viên nội bộ</a></div>
-    <div class="text-box-32"><a href="03_Poster/02_rCRM.png" target="_blank">02. rCRM</a></div>
-    <div class="text-box-33"><a href="03_Poster/03_Huong_dan_chuyen_tien.png" target="_blank">03. Hướng dẫn chuyển tiền</a></div>
-    <div class="text-box-34"><a href="03_Poster/04_Nang_cao_nang_luc_dau_tu.png" target="_blank">04. Nâng cao năng lực đầu tư</a></div>
-
-    <!-- Box 4 -->
-    <div class="text-box-41"><a href="https://anhnd7pattern.netlify.app/" target="_blank">01. Pattern phổ biến</a></div>
-    <div class="text-box-42"><a href="https://anhndmillionaire.netlify.app/" target="_blank">02. Who Is the Millionaire</a></div>
-    <div class="text-box-43"><a href="https://anhndcanslim.netlify.app/" target="_blank">03. CANSLIM</a></div>
-    <div class="text-box-44"><a href="https://anhndkeotha.netlify.app/" target="_blank">04. Kéo thả PTCB PTKT</a></div>
+        <!-- Box 2 -->
+        <div class="text-box text-box-21"><a href="https://drive.google.com/file/d/13mJXPT0PJwPCLnOh19yR0P7c61m356oW/view?usp=sharing" target="_blank">01. Introduction</a></div>
+        <div class="text-box text-box-22"><a href="https://drive.google.com/file/d/1oAihei3iG17I3Q9UQGRB9Lu3El4AAEMi/view?usp=sharing" target="_blank">02. Chúc mừng ngày 20-11</a></div>
+        <div class="text-box text-box-23"><a href="https://drive.google.com/file/d/1vR3odIpXO6y1TjGASLB1OomQsplHU01z/view?usp=sharing" target="_blank">03. Sản phẩm chứng khoán TT Việt Nam</a></div>
+        <div class="text-box text-box-24"><a href="https://drive.google.com/file/d/1DS-BVvkySfYw8MlRbxbbkc7l_6Sg6HDn/view?usp=sharing" target="_blank">04. rCRM</a></div>
+    </div>
 </body>
 </html>

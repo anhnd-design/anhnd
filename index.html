@@ -5,32 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio</title>
     <style>
-        /* Căn chỉnh để trang luôn vừa với bề ngang điện thoại */
+        /* Đảm bảo trang web luôn vừa với bề ngang điện thoại */
         html, body {
-            width: 100vw; /* Chiều rộng 100% theo màn hình */
-            height: 100vh;
+            width: 100vw;
+            height: auto;
             margin: 0;
             padding: 0;
-            overflow-x: hidden; /* Không cho phép cuộn ngang */
+            overflow-x: hidden; /* Không cho cuộn ngang */
             display: flex;
             justify-content: center; /* Căn giữa nội dung */
-            align-items: center; /* Căn giữa dọc */
-            transform: scale(1);
-            transform-origin: top left;
         }
 
-        /* Bọc nội dung vào container cố định tỷ lệ */
+        /* Định dạng nội dung chính */
         .container {
-            width: 1024px; /* Kích thước chuẩn như PC */
+            width: 1024px; /* Chiều rộng chuẩn */
             height: auto;
-            transform: scale(1);
-            transform-origin: top left;
         }
 
-        /* Cố định tỷ lệ trang trên điện thoại */
+        /* Scale trang web sao cho vừa bề ngang điện thoại */
         @media screen and (max-width: 1024px) {
             .container {
-                transform: scale(calc(100vw / 1024));
+                transform: scale(calc(100vw / 1024)); /* Co lại theo bề ngang */
                 transform-origin: top left;
             }
         }
@@ -74,17 +69,19 @@
 </head>
 <body>
     <div class="container">
+        <h1>Sản phẩm</h1>
+
         <!-- Box 1 -->
-        <div class="text-box text-box-11"><a href="01_Slide/01_Tuyet_dinh_Powerpoint.pdf" target="_blank">01. Tuyệt đỉnh Powerpoint</a></div>
-        <div class="text-box text-box-12"><a href="01_Slide/02_San_pham_bao_hiem.pdf" target="_blank">02. Sản phẩm bảo hiểm</a></div>
-        <div class="text-box text-box-13"><a href="01_Slide/03_Danh_muc_ho_so.pdf" target="_blank">03. Danh mục hồ sơ</a></div>
-        <div class="text-box text-box-14"><a href="01_Slide/04_Binh_dang_gioi.pdf" target="_blank">04. Bình đẳng giới</a></div>
+        <div class="text-box text-box-11"><a href="#">01. Tuyệt đỉnh Powerpoint</a></div>
+        <div class="text-box text-box-12"><a href="#">02. Sản phẩm bảo hiểm</a></div>
+        <div class="text-box text-box-13"><a href="#">03. Danh mục hồ sơ</a></div>
+        <div class="text-box text-box-14"><a href="#">04. Bình đẳng giới</a></div>
 
         <!-- Box 2 -->
-        <div class="text-box text-box-21"><a href="https://drive.google.com/file/d/13mJXPT0PJwPCLnOh19yR0P7c61m356oW/view?usp=sharing" target="_blank">01. Introduction</a></div>
-        <div class="text-box text-box-22"><a href="https://drive.google.com/file/d/1oAihei3iG17I3Q9UQGRB9Lu3El4AAEMi/view?usp=sharing" target="_blank">02. Chúc mừng ngày 20-11</a></div>
-        <div class="text-box text-box-23"><a href="https://drive.google.com/file/d/1vR3odIpXO6y1TjGASLB1OomQsplHU01z/view?usp=sharing" target="_blank">03. Sản phẩm chứng khoán TT Việt Nam</a></div>
-        <div class="text-box text-box-24"><a href="https://drive.google.com/file/d/1DS-BVvkySfYw8MlRbxbbkc7l_6Sg6HDn/view?usp=sharing" target="_blank">04. rCRM</a></div>
+        <div class="text-box text-box-21"><a href="#">01. Introduction</a></div>
+        <div class="text-box text-box-22"><a href="#">02. Chúc mừng ngày 20-11</a></div>
+        <div class="text-box text-box-23"><a href="#">03. Sản phẩm chứng khoán TT Việt Nam</a></div>
+        <div class="text-box text-box-24"><a href="#">04. rCRM</a></div>
     </div>
 </body>
 </html>

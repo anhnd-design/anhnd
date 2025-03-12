@@ -5,35 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio</title>
     <style>
-        /* Đảm bảo trang web không có thanh cuộn */
+        /* Đảm bảo không có thanh cuộn ngang/dọc */
         body, html {
             margin: 0;
             padding: 0;
             width: 100vw;
             height: 100vh;
-            overflow: hidden; /* Không cho cuộn ngang/dọc */
+            overflow: hidden; /* Ẩn thanh cuộn */
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #f8f8f8; /* Màu nền nhẹ */
+            background: url('background.jpg') no-repeat center center;
+            background-size: cover; /* Giữ ảnh nền */
         }
 
-        /* Vùng chứa nội dung */
+        /* Khung chính của nội dung */
         .container {
-            width: 1024px;  /* Kích thước gốc của nội dung */
-            height: 768px;  /* Chiều cao gốc */
-            transform-origin: top left;
+            width: 1024px; /* Giữ nguyên kích thước */
+            height: 768px;
+            position: relative;
+            background: rgba(255, 255, 255, 0.9); /* Để không mất nội dung */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* Scale theo tỉ lệ phù hợp với màn hình */
-        @media (max-aspect-ratio: 1024/768) { /* Nếu màn hình cao hơn */
-            .container {
-                transform: scale(calc(100vw / 1024));
-            }
-        }
-        @media (min-aspect-ratio: 1024/768) { /* Nếu màn hình rộng hơn */
-            .container {
-                transform: scale(calc(100vh / 768));
+        /* Scale tự động để fit với màn hình */
+        @media screen and (max-width: 1024px), (max-height: 768px) {
+            body {
+                zoom: calc(100vw / 1024);
             }
         }
 
@@ -56,6 +55,16 @@
         .text-box-22 { left: 680px; top: 100px; }
         .text-box-23 { left: 680px; top: 120px; }
         .text-box-24 { left: 680px; top: 140px; }
+
+        .text-box-31 { left: 380px; top: 200px; }
+        .text-box-32 { left: 380px; top: 220px; }
+        .text-box-33 { left: 380px; top: 240px; }
+        .text-box-34 { left: 380px; top: 260px; }
+
+        .text-box-41 { left: 680px; top: 200px; }
+        .text-box-42 { left: 680px; top: 220px; }
+        .text-box-43 { left: 680px; top: 240px; }
+        .text-box-44 { left: 680px; top: 260px; }
 
         /* Style cho link */
         a {
@@ -83,6 +92,18 @@
         <div class="text-box text-box-22"><a href="#">02. Chúc mừng ngày 20-11</a></div>
         <div class="text-box text-box-23"><a href="#">03. Sản phẩm chứng khoán TT Việt Nam</a></div>
         <div class="text-box text-box-24"><a href="#">04. rCRM</a></div>
+
+        <!-- Box 3 -->
+        <div class="text-box text-box-31"><a href="#">01. Nâng cao năng lực Giảng viên</a></div>
+        <div class="text-box text-box-32"><a href="#">02. FCRM</a></div>
+        <div class="text-box text-box-33"><a href="#">03. Hướng dẫn chuyển tiền</a></div>
+        <div class="text-box text-box-34"><a href="#">04. Nâng cao năng lực đào tạo</a></div>
+
+        <!-- Box 4 -->
+        <div class="text-box text-box-41"><a href="#">01. Sản phẩm phổ biến</a></div>
+        <div class="text-box text-box-42"><a href="#">02. Who Is The Millionaire</a></div>
+        <div class="text-box text-box-43"><a href="#">03. CANSLIM</a></div>
+        <div class="text-box text-box-44"><a href="#">04. Kéo thả PTCB PTKT</a></div>
     </div>
 </body>
 </html>

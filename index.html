@@ -3,63 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sản phẩm</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Cambria, serif;
+            background: url('Background.png') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Wrapper chính để giữ layout */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        /* Hộp chứa từng nhóm nội dung */
+        .box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            margin-bottom: 20px;
+        }
+
+        /* Danh sách liên kết */
+        .box a {
+            display: block;
+            text-decoration: none;
+            color: #404040;
+            font-size: 16px;
+            margin: 5px 0;
+            font-style: italic;
+        }
+
+        .box a:hover {
+            text-decoration: underline;
+            color: blue;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .box {
+                width: 90%; /* Chiếm gần hết màn hình */
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Sidebar bên trái -->
-        <div class="sidebar">
-            <h1>Sản phẩm</h1>
-            <div class="contact">
-                Nguyễn Duy Anh <br>
-                📞 0972 173 972 <br>
-                ✉️ anhnd.design@gmail.com
-            </div>
+        <!-- Box 1 -->
+        <div class="box">
+            <h3>Slide</h3>
+            <a href="01_Slide/01_Tuyet_dinh_Powerpoint.pdf" target="_blank">01. Tuyệt đỉnh Powerpoint</a>
+            <a href="01_Slide/02_San_pham_bao_hiem.pdf" target="_blank">02. Sản phẩm bảo hiểm</a>
+            <a href="01_Slide/03_Danh_muc_ho_so.pdf" target="_blank">03. Danh mục hồ sơ</a>
+            <a href="01_Slide/04_Binh_dang_gioi.pdf" target="_blank">04. Bình đẳng giới</a>
         </div>
 
-        <!-- Nội dung chính -->
-        <div class="content">
-            <div class="box">
-                <h2>Slide</h2>
-                <ul>
-                    <li>01. Tuyệt đỉnh Powerpoint</li>
-                    <li>02. Sản phẩm bảo hiểm</li>
-                    <li>03. Danh mục hồ sơ</li>
-                    <li>04. Bình đẳng giới</li>
-                </ul>
-            </div>
+        <!-- Box 2 -->
+        <div class="box">
+            <h3>Video</h3>
+            <a href="https://drive.google.com/file/d/13mJXPT0PJwPCLnOh19yR0P7c61m356oW/view?usp=sharing" target="_blank">01. Introduction</a>
+            <a href="https://drive.google.com/file/d/1oAihei3iG17I3Q9UQGRB9Lu3El4AAEMi/view?usp=sharing" target="_blank">02. Chúc mừng ngày 20-11</a>
+            <a href="https://drive.google.com/file/d/1vR3odIpXO6y1TjGASLB1OomQsplHU01z/view?usp=sharing" target="_blank">03. Sản phẩm chứng khoán TT Việt Nam</a>
+            <a href="https://drive.google.com/file/d/1DS-BVvkySfYw8MlRbxbbkc7l_6Sg6HDn/view?usp=sharing" target="_blank">04. rCRM</a>
+        </div>
 
-            <div class="box">
-                <h2>Video</h2>
-                <ul>
-                    <li>01. Introduction</li>
-                    <li>02. Chúc mừng ngày 20-11</li>
-                    <li>03. Sản phẩm chứng khoán TT Việt Nam</li>
-                    <li>04. rCRM</li>
-                </ul>
-            </div>
+        <!-- Box 3 -->
+        <div class="box">
+            <h3>Poster</h3>
+            <a href="03_Poster/01_Nang_cao_nang_luc_Giang_vien_noi_bo.png" target="_blank">01. Nâng cao năng lực Giảng viên nội bộ</a>
+            <a href="03_Poster/02_rCRM.png" target="_blank">02. rCRM</a>
+            <a href="03_Poster/03_Huong_dan_chuyen_tien.png" target="_blank">03. Hướng dẫn chuyển tiền</a>
+            <a href="03_Poster/04_Nang_cao_nang_luc_dau_tu.png" target="_blank">04. Nâng cao năng lực đầu tư</a>
+        </div>
 
-            <div class="box">
-                <h2>Poster</h2>
-                <ul>
-                    <li>01. Nâng cao năng lực Giảng viên nội bộ</li>
-                    <li>02. rCRM</li>
-                    <li>03. Hướng dẫn chuyển tiền</li>
-                    <li>04. Nâng cao năng lực đầu tư</li>
-                </ul>
-            </div>
-
-            <div class="box">
-                <h2>Scorm</h2>
-                <ul>
-                    <li>01. Pattern phổ biến</li>
-                    <li>02. Who Is the Millionaire</li>
-                    <li>03. CANSLIM</li>
-                    <li>04. Kéo thả PTCB PTKT</li>
-                </ul>
-            </div>
+        <!-- Box 4 -->
+        <div class="box">
+            <h3>Scorm</h3>
+            <a href="https://anhnd7pattern.netlify.app/" target="_blank">01. Pattern phổ biến</a>
+            <a href="https://anhndmillionaire.netlify.app/" target="_blank">02. Who Is the Millionaire</a>
+            <a href="https://anhndcanslim.netlify.app/" target="_blank">03. CANSLIM</a>
+            <a href="https://anhndkeotha.netlify.app/" target="_blank">04. Kéo thả PTCB PTKT</a>
         </div>
     </div>
 

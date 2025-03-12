@@ -1,79 +1,73 @@
-/* Reset CSS */
+/* Reset mặc định */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Cambria, serif;
+    font-family: Arial, sans-serif;
 }
 
-/* Body với nền background */
+/* Nền trang */
 body {
     background: url('Background.png') no-repeat center center fixed;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-/* Layout chính */
+/* Container chính */
 .container {
-    display: flex;
-    min-height: 100vh;
-    padding: 20px;
-}
-
-/* Sidebar bên trái */
-.sidebar {
-    width: 30%; /* Chiếm 1/3 màn hình bên trái */
-    background: #333;
-    color: white;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.sidebar h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.contact {
-    font-size: 1em;
-    margin-top: 20px;
-}
-
-/* Nội dung chính (phía bên phải) */
-.content {
-    width: 70%; /* Chiếm 2/3 bên phải */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end; /* Đẩy box về phía phải */
-    align-content: flex-start;
+    width: 80%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cột */
+    grid-template-rows: repeat(2, 1fr); /* 2 hàng */
     gap: 20px;
-    margin-top: -40px; /* Đẩy các box lên trên */
+    position: relative;
 }
 
-/* Các box */
+/* Style chung cho box */
 .box {
     background: white;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: auto; /* Chiều rộng tự co theo nội dung */
-    min-width: 200px; /* Đặt chiều rộng tối thiểu */
-    max-width: 300px; /* Giới hạn chiều rộng tối đa */
+    width: 280px;  /* Đặt width cố định để đồng đều */
+    height: 180px; /* Đặt height cố định để đồng đều */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
-/* Tiêu đề box */
-.box h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+/* Định vị từng box theo lưới */
+.top-left {
+    align-self: start;
+    justify-self: start;
 }
 
-/* Danh sách liên kết */
+.top-right {
+    align-self: start;
+    justify-self: end;
+}
+
+.bottom-left {
+    align-self: end;
+    justify-self: start;
+}
+
+.bottom-right {
+    align-self: end;
+    justify-self: end;
+}
+
+/* Link trong box */
 .box a {
     display: block;
     text-decoration: none;
     color: #404040;
-    font-size: 1em;
+    font-size: 16px;
     margin: 5px 0;
     font-style: italic;
 }
@@ -83,27 +77,19 @@ body {
     color: blue;
 }
 
-/* Responsive: Khi màn hình nhỏ thì các box xếp dọc */
+/* 🎯 Responsive: Hiển thị trên điện thoại */
 @media (max-width: 768px) {
     .container {
+        display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    .sidebar {
-        width: 100%; /* Sidebar full chiều rộng */
-        text-align: center;
-    }
-
-    .content {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 0;
+        height: auto;
+        gap: 10px;
     }
 
     .box {
-        width: 90%; /* Chiếm gần hết màn hình */
+        width: 90%;
+        height: auto;
         text-align: center;
     }
 }

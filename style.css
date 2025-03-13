@@ -17,13 +17,21 @@ body {
     min-height: 100vh;
 }
 
-/* Ảnh trên cùng */
+/* Ảnh trên cùng luôn cố định trên cùng, không co giãn */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white; /* Tạo nền trắng cho ảnh */
+    z-index: 1000;
+    text-align: center;
+}
+
 .header img {
     width: 100%;
-    max-width: 600px; /* Giới hạn max để không quá lớn */
     height: auto;
-    display: block;
-    margin: 10px auto;
+    max-height: 200px; /* Đảm bảo không bị quá cao */
 }
 
 /* Container chứa 4 box */
@@ -31,7 +39,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 1px; /* 🔥 Khoảng cách 1px giữa các box */
-    margin-top: 20px;
+    margin-top: 220px; /* Đẩy xuống dưới để không bị che bởi ảnh trên cùng */
 }
 
 /* Style chung cho box */

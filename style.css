@@ -8,24 +8,30 @@
 
 /* Nền trang */
 body {
-    background: url('Background.png') no-repeat center center fixed;
+    background: url('Back.png') no-repeat center center fixed;
     background-size: cover;
     display: flex;
-    justify-content: flex-end; /* Đẩy nội dung về bên phải */
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
-    padding-right: 10%; /* Dịch sang 2/3 bên phải */
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+/* Ảnh trên cùng */
+.header img {
+    width: 100%;
+    max-width: 600px; /* Giới hạn max để không quá lớn */
+    height: auto;
+    display: block;
+    margin: 10px auto;
 }
 
 /* Container chứa 4 box */
 .container {
-    width: 50%;  
-    height: 70vh;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 cột */
-    grid-template-rows: repeat(2, 1fr); /* 2 hàng */
-    gap: 1px; /* 🔥 Giảm khoảng cách giữa các box xuống còn 4px */
-    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 1px; /* 🔥 Khoảng cách 1px giữa các box */
+    margin-top: 20px;
 }
 
 /* Style chung cho box */
@@ -34,33 +40,8 @@ body {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 260px;  
-    height: 160px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 250px;
     text-align: center;
-}
-
-/* Định vị từng box */
-.top-left {
-    align-self: start;
-    justify-self: start;
-}
-
-.top-right {
-    align-self: start;
-    justify-self: end;
-}
-
-.bottom-left {
-    align-self: end;
-    justify-self: start;
-}
-
-.bottom-right {
-    align-self: end;
-    justify-self: end;
 }
 
 /* Link trong box */
@@ -80,23 +61,14 @@ body {
 
 /* 🎯 Responsive: Hiển thị trên điện thoại */
 @media (max-width: 768px) {
-    body {
-        justify-content: center;
-        padding-right: 0;
-    }
-
     .container {
-        display: flex;
         flex-direction: column;
         align-items: center;
-        width: 90%;
-        height: auto;
-        gap: 4px; /* 🔥 Khoảng cách nhỏ để không bị rời rạc */
+        gap: 4px; /* Tăng khoảng cách để nhìn cân đối */
     }
 
     .box {
-        width: 100%;
-        height: auto;
+        width: 90%; /* Chiếm gần hết màn hình */
         text-align: center;
     }
 }

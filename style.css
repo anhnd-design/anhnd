@@ -21,8 +21,9 @@ body {
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 1px; /* 🔥 Khoảng cách 1px giữa các box */
+    align-items: stretch; /* 🔥 Đảm bảo tất cả box có chiều cao bằng nhau */
+    gap: 2px; /* 🔥 Khoảng cách 2px giữa các box */
+    width: 90%;
 }
 
 /* Style chung cho box */
@@ -33,6 +34,10 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 250px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1; /* 🔥 Giúp tất cả box có cùng chiều cao */
 }
 
 /* Link trong box */
@@ -54,10 +59,13 @@ body {
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        gap: 4px; /* 🔥 Tạo khoảng cách đều nhau */
+        gap: 2px; /* 🔥 Khoảng cách đều nhau */
+        width: 90%;
+        align-items: center;
     }
 
     .box {
-        width: 90%; /* Chiếm gần hết màn hình */
+        width: 100%;
+        text-align: center;
     }
 }

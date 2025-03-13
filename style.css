@@ -24,7 +24,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 cột */
     grid-template-rows: repeat(2, 1fr); /* 2 hàng */
-    gap: 4px; /* 🔥 Giảm khoảng cách giữa các box xuống còn 4px */
+    gap: 1px; /* 🔥 Giảm khoảng cách giữa các box xuống còn 4px */
     position: relative;
 }
 

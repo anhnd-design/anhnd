@@ -8,38 +8,21 @@
 
 /* Nền trang */
 body {
-    background: url('Back.png') no-repeat center center fixed;
+    background: url('Background.png') no-repeat center center fixed;
     background-size: cover;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
-}
-
-/* Ảnh trên cùng luôn cố định trên cùng, không co giãn */
-.header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: white; /* Tạo nền trắng cho ảnh */
-    z-index: 1000;
-    text-align: center;
-}
-
-.header img {
-    width: 100%;
-    height: auto;
-    max-height: 200px; /* Đảm bảo không bị quá cao */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    height: 100vh;
+    width: 100vw;
 }
 
 /* Container chứa 4 box */
 .container {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1px; /* 🔥 Khoảng cách 1px giữa các box */
-    margin-top: 220px; /* Đẩy xuống dưới để không bị che bởi ảnh trên cùng */
 }
 
 /* Style chung cho box */
@@ -71,12 +54,10 @@ body {
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        align-items: center;
-        gap: 4px; /* Tăng khoảng cách để nhìn cân đối */
+        gap: 4px; /* 🔥 Tạo khoảng cách đều nhau */
     }
 
     .box {
         width: 90%; /* Chiếm gần hết màn hình */
-        text-align: center;
     }
 }

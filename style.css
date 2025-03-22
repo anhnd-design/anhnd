@@ -52,7 +52,7 @@ body {
 
 .box a:hover {
     text-decoration: underline;
-    color: blue;
+    color: red;
 }
 
 /* 🎯 Responsive: Hiển thị trên điện thoại */

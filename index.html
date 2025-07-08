@@ -116,51 +116,36 @@
     /* ==========================
        KHUNG HIỂN THỊ CÁC CARD
     =========================== */
-.cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-.card {
-  width: 300px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  background-color: white;
-  text-align: center;
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .card {
+      width: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      background-color: white;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: none; /* ✅ Bỏ gạch chân */
+      color: inherit;         /* ✅ Giữ nguyên màu chữ */
+    }
 
-.card:hover {
-  transform: scale(1.08);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
-}
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
 
-/* Bọc ảnh trong khung có padding để tạo khoảng cách viền */
-.thumbnail-wrapper {
-  padding: 5px 5px 0 5px; /* cách top, trái, phải là 5px; bottom = 0 */
-  background-color: #f5f5f5; /* nền nhẹ để tách biệt ảnh nếu ảnh nhỏ */
-}
-
-.card img {
-  width: 100%;
-  height: 150px;
-  object-fit: contain;
-  display: block;
-}
-
-.card h3,
-.card p {
-  margin: 10px 0;
-  padding: 0 10px;
-  color: #333;
-}
-
+    .card p {
+      padding: 10px;
+      color: gray;
+      font-weight: bold;
+    }
 
     /* ==========================
        FOOTER
@@ -309,7 +294,7 @@
 
     <!-- Nội dung chữ bên trái -->
     <div class="content">
-      <h1>LEARNING MATERIALS</h1>
+      <h1>LEARNING MATERIAL</h1>
       <h3>Truyền cảm hứng qua từng sản phẩm đào tạo</h3>
       <p>
         Đây là không gian giới thiệu các sản phẩm học liệu sáng tạo của tôi, nơi kết hợp giữa thiết kế trực quan và tính ứng dụng thực tế. Mỗi sản phẩm không chỉ truyền tải kiến thức mà còn mang lại trải nghiệm học tập thú vị và hiệu quả. Hãy cùng khám phá cách học liệu có thể chạm đến cảm xúc người học.

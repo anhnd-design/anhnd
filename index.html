@@ -146,11 +146,27 @@
       color: gray;
       font-weight: bold;
     }
-    .card:hover {
+.card {
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+
+  /* ✅ Mượt mà hiệu ứng scale và shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
   transform: scale(1.08);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   background-color: #e9f5ff;
 }
+
 
     /* ==========================
        FOOTER

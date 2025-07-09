@@ -470,66 +470,86 @@
   <!-- ==========================
        FOOTER
   =========================== -->
-<!-- Link đến Font Awesome để dùng icon -->
+<!-- Link Font Awesome để dùng icon -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+<!-- Footer có background và thông tin liên hệ -->
 <footer style="
   background-image: url('Link_anh/Background6.png');  /* 🌄 Nền phần liên hệ */
   background-size: cover;
   background-position: center;
   color: white;
-  padding: 40px 30px;
-  line-height: 2;
+  padding: 40px 20px;
   font-family: sans-serif;
 ">
 
-  <!-- Khối chứa toàn bộ phần liên hệ -->
-  <div style="display: flex; align-items: flex-start;">
+  <!-- Container chính, dịch toàn bộ sang phải -->
+  <div style="
+    display: flex;
+    align-items: flex-start;
+    margin-left: 25px;   /* 📌 Dịch cả khối (gồm thanh + nội dung) sang phải */
+  ">
 
-    <!-- Thanh trắng dọc bên trái -->
+    <!-- Thanh dọc trắng -->
     <div style="
-      width: 4px;         /* 📏 Độ dày thanh */
-      height: 190px;      /* 📏 Chiều dài thanh */
+      width: 4px;           /* 📏 Độ dày thanh */
+      height: 190px;        /* 📏 Chiều dài thanh */
       background-color: white;
       margin-right: 20px;
-      margin-top: 4px;
+      margin-top: 5px;
     "></div>
 
-    <!-- Nội dung thông tin liên hệ -->
-    <div style="padding-left: 25px;">  <!-- 📦 Dịch nội dung sang phải -->
-
+    <!-- Phần nội dung liên hệ -->
+    <div class="contact-content" style="padding-left: 0;">
       <!-- Tiêu đề -->
-      <h3 style="margin: 0 0 10px 0; font-size: 18px;">LIÊN HỆ:</h3>
+      <h3 style="margin: 0 0 12px 0; font-size: 18px;">LIÊN HỆ:</h3>
 
       <!-- Dòng 1: Tên -->
-      <p style="margin: 8px 0;">
+      <p style="margin: 10px 0;">
         <i class="fas fa-user" style="margin-right: 10px;"></i>
         Mr. Nguyễn Duy Anh
       </p>
 
       <!-- Dòng 2: Số điện thoại -->
-      <p style="margin: 8px 0;">
+      <p style="margin: 10px 0;">
         <i class="fas fa-phone" style="margin-right: 10px;"></i>
         0972 173 972
       </p>
 
       <!-- Dòng 3: Email -->
-      <p style="margin: 8px 0;">
+      <p style="margin: 10px 0;">
         <i class="fas fa-envelope" style="margin-right: 10px;"></i>
         anhnd.design@gmail.com
       </p>
 
       <!-- Dòng 4: Website -->
-      <p style="margin: 8px 0;">
+      <p style="margin: 10px 0;">
         <i class="fas fa-globe" style="margin-right: 10px;"></i>
         <a href="https://anhnd-design.github.io/anhnd/" style="color: white; text-decoration: none;">
           https://anhnd-design.github.io/anhnd/
         </a>
       </p>
-      
     </div>
   </div>
 </footer>
+
+<!-- 🔧 CSS cho responsive trên điện thoại -->
+<style>
+  @media (max-width: 480px) {
+    .contact-content {
+      font-size: 13px;         /* 📱 Tự động thu nhỏ chữ khi trên điện thoại */
+      line-height: 1.6;
+    }
+
+    .contact-content p i {
+      margin-right: 6px;       /* 📏 Thu hẹp icon */
+    }
+
+    footer h3 {
+      font-size: 15px;         /* 📏 Thu nhỏ tiêu đề trên mobile */
+    }
+  }
+</style>
 
 
   <!-- ==========================

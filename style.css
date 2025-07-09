@@ -97,6 +97,7 @@ section {
    PHẦN GIỚI THIỆU (HOME)
 =========================== */
 .home-container {
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -163,7 +164,7 @@ section {
   text-align: center;
   font-size: 36px;
   font-weight: bold;
-margin-top: 70px;     /* Tạo khoảng cách phía trên phần tử */
+margin-top: 0px;     /* Tạo khoảng cách phía trên phần tử */
 margin-bottom: 50px;   /* Tạo khoảng cách phía dưới phần tử */}
 
 .section-description {

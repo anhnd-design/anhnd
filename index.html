@@ -169,6 +169,7 @@
        KHUNG HIỂN THỊ CÁC CARD
     =========================== */
  /* ==== CARD DESKTOP & MOBILE ==== */
+/* === CONTAINER CHỨA CÁC CARD === */
 .cards {
   display: flex;
   justify-content: center;
@@ -176,6 +177,7 @@
   gap: 20px;
 }
 
+/* === CARD CƠ BẢN === */
 .card {
   width: 300px;
   border-radius: 12px;
@@ -184,74 +186,49 @@
   background-color: white;
   text-align: center;
   cursor: pointer;
-  text-decoration: none; /* ✅ Bỏ gạch chân */
-  color: inherit;         /* ✅ Giữ nguyên màu chữ */
+  text-decoration: none;
+  color: inherit;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease;  /* 👈 hiệu ứng phóng to */
 }
 
-/* Hình ảnh giữ đúng tỷ lệ */
+/* === HIỆU ỨNG HOVER PHÓNG TO TRÊN DESKTOP === */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* === HÌNH ẢNH TRONG CARD === */
 .card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
 
-/* Text trong card */
+/* === TIÊU ĐỀ TRONG CARD === */
 .card p {
   padding: 10px;
   color: gray;
   font-weight: bold;
+  font-size: 16px;
 }
 
-/* ==== RESPONSIVE CHO MOBILE ==== */
+/* === RESPONSIVE CHO MOBILE === */
 @media (max-width: 768px) {
   .card {
-    width: 90vw;       /* ✅ co lại vừa màn hình nhưng vẫn giữ tỷ lệ chữ nhật */
-    max-width: 320px;  /* ✅ không to hơn 320px */
+    width: 90vw;           /* ✅ co lại theo màn hình điện thoại */
+    max-width: 320px;      /* ✅ tránh vượt kích thước tối đa */
   }
 
   .card img {
-    height: 160px;     /* ✅ giảm chiều cao ảnh nếu cần */
+    height: 160px;         /* ✅ giảm chiều cao ảnh nếu cần */
   }
 
   .card p {
-    font-size: 14px;
+    font-size: 14px;       /* ✅ text nhỏ hơn cho mobile */
   }
 }
 
-    /* ==========================
-       RESPONSIVE CHO MOBILE
-    =========================== */
-    @media (max-width: 768px) {
-      .navbar {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .navbar a {
-        margin: 8px 12px;
-        font-size: 14px;
-      }
-
-      .content {
-        max-width: 90%;
-        margin: auto;
-        text-align: center;
-      }
-
-      .section-description {
-        padding: 0 10px;
-      }
-
-      .card {
-        width: 90%;
-      }
-    }
-  </style>
-</head>
-
-<body>
   <!-- ==========================
        MENU ĐIỀU HƯỚNG
   =========================== -->

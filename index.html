@@ -5,20 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
   <title>Nguyen Duy Anh</title>
 
-  <!-- Link Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!-- Link font Roboto từ Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 
-  <!-- Link Font Awesome để dùng icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- Link tới file CSS riêng -->
+  <!-- Link đến file CSS bên ngoài -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Link Font Awesome cho icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-  <!-- ======================== -->
-  <!--       THANH MENU        -->
-  <!-- ======================== -->
+  <!-- ========== MENU ĐIỀU HƯỚNG (NAVBAR) ========== -->
   <div class="navbar">
     <div class="nav-inner">
       <a href="#home" class="nav-link active">Home</a>
@@ -29,43 +27,129 @@
     </div>
   </div>
 
-  <!-- ======================== -->
-  <!--       SECTION HOME      -->
-  <!-- ======================== -->
+  <!-- ========== SECTION 1: HOME ========== -->
   <section id="home" style="background-image: url('Link_anh/Background1.png');">
     <div class="home-container">
+      <!-- Nội dung chữ bên trái -->
       <div class="content">
         <h1>Learning Materials</h1>
         <h3>Truyền cảm hứng qua từng sản phẩm đào tạo</h3>
-        <p>Đây là không gian giới thiệu các sản phẩm học liệu sáng tạo của tôi, nơi kết hợp giữa thiết kế trực quan và tính ứng dụng thực tế. Mỗi sản phẩm không chỉ truyền tải kiến thức mà còn mang lại trải nghiệm học tập thú vị và hiệu quả. Hãy cùng khám phá cách học liệu có thể chạm đến cảm xúc người học.</p>
+        <p>
+          Đây là không gian giới thiệu các sản phẩm học liệu sáng tạo của tôi, nơi kết hợp giữa thiết kế trực quan và tính ứng dụng thực tế. Mỗi sản phẩm không chỉ truyền tải kiến thức mà còn mang lại trải nghiệm học tập thú vị và hiệu quả. Hãy cùng khám phá cách học liệu có thể chạm đến cảm xúc người học.
+        </p>
       </div>
+      <!-- Ảnh bên phải -->
       <div class="deco-container">
         <img src="Link_anh/deco.png" alt="Decorative" class="decor">
       </div>
     </div>
   </section>
 
-  <!-- ======================== -->
-  <!--       SECTION POSTER    -->
-  <!-- ======================== -->
+  <!-- ========== SECTION 2: POSTER ========== -->
   <section id="poster" style="background-image: url('Link_anh/Background2.png');">
     <div class="section-title" style="color: red;">KHƠI NGUỒN HỨNG THÚ, DẪN LỐI KHÁM PHÁ</div>
-    <p class="section-description">Poster/Thư mời là điểm chạm đầu tiên, thu hút người học thông qua hình ảnh sáng tạo và thông điệp cô đọc...</p>
+    <p class="section-description">
+      Poster/Thư mời là điểm chạm đầu tiên, thu hút người học thông qua hình ảnh sáng tạo và thông điệp cô đọng. Sự kết hợp này khơi gợi tò mò, tạo cảm hứng và mở ra động lực để người học sẵn sàng bước vào hành trình khám phá tri thức.
+    </p>
     <div class="cards">
-      <!-- Lần lượt các poster ở đây -->
       <a href="01. Poster/01_Nang_cao_nang_luc_Giang_vien_noi_bo.png" target="_blank" class="card">
-        <img src="01. Poster/01_Nang_cao_nang_luc_Giang_vien_noi_bo.png" alt="Poster">
+        <img src="01. Poster/01_Nang_cao_nang_luc_Giang_vien_noi_bo.png" alt="Ảnh">
         <p>Giảng viên nội bộ</p>
       </a>
-      <!-- Thêm các card khác như trong bản gốc -->
+      <a href="01. Poster/02_rCRM.png" target="_blank" class="card">
+        <img src="01. Poster/02_rCRM.png" alt="Ảnh">
+        <p>Hệ thống rCRM</p>
+      </a>
+      <a href="01. Poster/03_Huong_dan_chuyen_tien.png" target="_blank" class="card">
+        <img src="01. Poster/03_Huong_dan_chuyen_tien.png" alt="Ảnh">
+        <p>Hướng dẫn chuyển tiền</p>
+      </a>
+      <a href="01. Poster/04_Nang_cao_nang_luc_dau_tu.png" target="_blank" class="card">
+        <img src="01. Poster/04_Nang_cao_nang_luc_dau_tu.png" alt="Ảnh">
+        <p>Năng lực đầu tư</p>
+      </a>
     </div>
   </section>
 
-  <!-- Các SECTION SLIDE, VIDEO, SCORM làm tương tự như POSTER (sử dụng class .section-title, .section-description và .cards) -->
+  <!-- ========== SECTION 3: SLIDE ========== -->
+  <section id="slide" style="background-image: url('Link_anh/Background3.png');">
+    <div class="section-title" style="color: #003366;">SẮP XẾP KIẾN THỨC, DẪN DẮT TƯ DUY</div>
+    <p class="section-description">
+      Slide không chỉ đơn thuần là nơi lưu giữ thông tin, mà là công cụ tổ chức, sắp xếp và kết nối kiến thức một cách logic. Slide được thiết kế để dẫn dắt người học từng bước, từ tổng quan đến chi tiết và ngược lại, giúp tiếp thu hiệu quả và ghi nhớ lâu dài.
+    </p>
+    <div class="cards">
+      <a href="02. Slide/01_Tuyet_dinh_Powerpoint.pdf" target="_blank" class="card">
+        <img src="Link_anh/Thumbnail slide 1.jpg" alt="Ảnh">
+        <p>Tuyệt đỉnh Powerpoint</p>
+      </a>
+      <a href="02. Slide/02_San_pham_bao_hiem.pdf" target="_blank" class="card">
+        <img src="Link_anh/Thumbnail slide 2.jpg" alt="Ảnh">
+        <p>Sản phẩm bảo hiểm</p>
+      </a>
+      <a href="02. Slide/03_Danh_muc_ho_so.pdf" target="_blank" class="card">
+        <img src="Link_anh/Thumbnail slide 3.jpg" alt="Ảnh">
+        <p>Danh mục hồ sơ</p>
+      </a>
+      <a href="02. Slide/04_Binh_dang_gioi.pdf" target="_blank" class="card">
+        <img src="Link_anh/Thumbnail slide 4.jpg" alt="Ảnh">
+        <p>Bình đẳng giới</p>
+      </a>
+    </div>
+  </section>
 
-  <!-- ======================== -->
-  <!--         FOOTER          -->
-  <!-- ======================== -->
+  <!-- ========== SECTION 4: VIDEO ========== -->
+  <section id="video" style="background-image: url('Link_anh/Background4.png');">
+    <div class="section-title" style="color: red;">KỂ CHUYỆN SINH ĐỘNG, TRUYỀN TẢI KIẾN THỨC</div>
+    <p class="section-description">
+      Video giúp chuyển hóa những khái niệm phức tạp, thuật ngữ chuyên môn thành các ví dụ gần gũi, dễ hiểu. Thông qua những khung hình sinh động và âm thanh cuốn hút, video mang đến trải nghiệm học tập hấp dẫn, giúp bài học trở nên sống động và dễ tiếp thu hơn.
+    </p>
+    <div class="cards">
+      <a href="https://drive.google.com/file/d/13mJXPT0PJwPCLnOh19yR0P7c61m356oW/view?usp=sharing" target="_blank" class="card">
+        <img src="Link_anh/Thumbnail video 1.jpg" alt="Ảnh">
+        <p>Introduction</p>
+      </a>
+      <a href="https://drive.google.com/file/d/1oAihei3iG17I3Q9UQGRB9Lu3El4AAEMi/view?usp=sharing" target="_blank" class="card">
+        <img src="Link_anh/Thumbnail video 2.jpg" alt="Ảnh">
+        <p>Chúc mừng 20-11</p>
+      </a>
+      <a href="https://drive.google.com/file/d/1vR3odIpXO6y1TjGASLB1OomQsplHU01z/view?usp=sharing" target="_blank" class="card">
+        <img src="Link_anh/Thumbnail video 3.jpg" alt="Ảnh">
+        <p>TTCK Việt Nam</p>
+      </a>
+      <a href="https://drive.google.com/file/d/1DS-BVvkySfYw8MlRbxbbkc7l_6Sg6HDn/view?usp=sharing" target="_blank" class="card">
+        <img src="Link_anh/Thumbnail video 4.jpg" alt="Ảnh">
+        <p>Hệ thống rCRM</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 5: SCORM ========== -->
+  <section id="scorm" style="background-image: url('Link_anh/Background5.png');">
+    <div class="section-title" style="color: #003366;">TƯƠNG TÁC TRỰC TIẾP, HỌC SÂU NHỚ LÂU</div>
+    <p class="section-description">
+      Scorm cho phép người học chủ động tham gia vào quá trình học thông qua các bài tập, câu hỏi tương tác và phản hồi tức thì. Sự tương tác liên tục giúp người học ôn luyện, kiểm tra và củng cố kiến thức một cách vững chắc, từ đó ghi nhớ lâu và hiểu sâu hơn.
+    </p>
+    <div class="cards">
+      <a href="https://anhnd7pattern.netlify.app/" target="_blank" class="card">
+        <img src="Link_anh/Thumbnail scorm 1.jpg" alt="Ảnh">
+        <p>7 Pattern phổ biến</p>
+      </a>
+      <a href="https://anhndmillionaire.netlify.app/" target="_blank" class="card">
+        <img src="Link_anh/Thumbnail scorm 2.jpg" alt="Ảnh">
+        <p>Who is the Millionaire</p>
+      </a>
+      <a href="https://anhndcanslim.netlify.app/" target="_blank" class="card">
+        <img src="Link_anh/Thumbnail scorm 3.jpg" alt="Ảnh">
+        <p>Phương pháp CANSLIM</p>
+      </a>
+      <a href="https://anhndkeotha.netlify.app/" target="_blank" class="card">
+        <img src="Link_anh/Thumbnail scorm 4.jpg" alt="Ảnh">
+        <p>PTCB + PTKT</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="footer-container">
       <div class="contact-content">
@@ -74,43 +158,21 @@
         <p><i class="fas fa-phone"></i> 0972 173 972</p>
         <p><i class="fas fa-envelope"></i> anhnd.design@gmail.com</p>
         <p><i class="fas fa-globe"></i>
-          <a href="https://anhnd-design.github.io/anhnd/" style="color: white; text-decoration: none;">https://anhnd-design.github.io/anhnd/</a>
+          <a href="https://anhnd-design.github.io/anhnd/" style="color: white; text-decoration: none;">
+            https://anhnd-design.github.io/anhnd/
+          </a>
         </p>
       </div>
     </div>
   </footer>
 
-  <!-- ======================== -->
-  <!--  SCRIPT: Highlight tab   -->
-  <!-- ======================== -->
+  <!-- ========== SCRIPT: Highlight tab khi click ========== -->
   <script>
     const navLinks = document.querySelectorAll('.nav-link');
-
-    // Khi click thì highlight tab
     navLinks.forEach(link => {
       link.addEventListener('click', function () {
         navLinks.forEach(nav => nav.classList.remove('active'));
         this.classList.add('active');
-      });
-    });
-
-    // Khi cuộn trang thì tự động highlight tab tương ứng
-    window.addEventListener('scroll', () => {
-      const sections = document.querySelectorAll('section');
-      let current = '';
-
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        if (scrollY >= sectionTop) {
-          current = section.getAttribute('id');
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
-        }
       });
     });
   </script>

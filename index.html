@@ -45,23 +45,34 @@
       font-size: 16px;
       transition: color 0.3s ease;
     }
-
+.navbar a:hover {
+  color: red;
+}
     .navbar a.active {
       color: red;
     }
 /* ✅ MOBILE: dàn đều ra để không bị xuống dòng */
 @media (max-width: 768px) {
   .nav-inner {
-    justify-content: space-evenly; /* Dàn đều trên mobile */
-    gap: 1px; /* Giảm khoảng cách nếu cần */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;           /* ❗ Không cho xuống dòng */
+    overflow-x: auto;            /* ✅ Nếu không đủ chỗ thì cuộn ngang */
+    gap: 2px;                    /* ✅ Tạo khoảng cách hợp lý */
+    padding: 2px 3px;           /* ✅ Padding nhẹ cho bên trong */
     width: 100%;
   }
 
   .nav-link {
-    font-size: 10px;
-    padding: 2px 2px;
+    font-size: 12px;
+    padding: 4px 6px;
+    white-space: nowrap;         /* ✅ Không cho ngắt dòng trong tab */
+    color: gray;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
   }
-}
 
     
     /* ==========================

@@ -5,18 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
   <title>Nguyen Duy Anh</title>
 
-  <!-- Link font Roboto từ Google Fonts -->
+  <!-- Font Google -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 
-  <!-- Link đến file CSS bên ngoài -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Link file CSS -->
+  <link rel="stylesheet" href="style.css" />
 
-  <!-- Link Font Awesome cho icon -->
+  <!-- Font Awesome dùng cho icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-  <!-- ========== MENU ĐIỀU HƯỚNG (NAVBAR) ========== -->
+  <!-- ===========================
+       MENU ĐIỀU HƯỚNG (NAVBAR)
+  ============================ -->
   <div class="navbar">
     <div class="nav-inner">
       <a href="#home" class="nav-link active">Home</a>
@@ -27,10 +29,12 @@
     </div>
   </div>
 
-  <!-- ========== SECTION 1: HOME ========== -->
+  <!-- ===========================
+       SECTION 1: HOME
+  ============================ -->
   <section id="home" style="background-image: url('Link_anh/Background1.png');">
     <div class="home-container">
-      <!-- Nội dung chữ bên trái -->
+      <!-- Cột chữ bên trái -->
       <div class="content">
         <h1>Learning Materials</h1>
         <h3>Truyền cảm hứng qua từng sản phẩm đào tạo</h3>
@@ -38,14 +42,16 @@
           Đây là không gian giới thiệu các sản phẩm học liệu sáng tạo của tôi, nơi kết hợp giữa thiết kế trực quan và tính ứng dụng thực tế. Mỗi sản phẩm không chỉ truyền tải kiến thức mà còn mang lại trải nghiệm học tập thú vị và hiệu quả. Hãy cùng khám phá cách học liệu có thể chạm đến cảm xúc người học.
         </p>
       </div>
-      <!-- Ảnh bên phải -->
+      <!-- Cột ảnh bên phải -->
       <div class="deco-container">
         <img src="Link_anh/deco.png" alt="Decorative" class="decor">
       </div>
     </div>
   </section>
 
-  <!-- ========== SECTION 2: POSTER ========== -->
+  <!-- ===========================
+       SECTION 2: POSTER
+  ============================ -->
   <section id="poster" style="background-image: url('Link_anh/Background2.png');">
     <div class="section-title" style="color: red;">KHƠI NGUỒN HỨNG THÚ, DẪN LỐI KHÁM PHÁ</div>
     <p class="section-description">
@@ -71,7 +77,9 @@
     </div>
   </section>
 
-  <!-- ========== SECTION 3: SLIDE ========== -->
+  <!-- ===========================
+       SECTION 3: SLIDE
+  ============================ -->
   <section id="slide" style="background-image: url('Link_anh/Background3.png');">
     <div class="section-title" style="color: #003366;">SẮP XẾP KIẾN THỨC, DẪN DẮT TƯ DUY</div>
     <p class="section-description">
@@ -97,7 +105,9 @@
     </div>
   </section>
 
-  <!-- ========== SECTION 4: VIDEO ========== -->
+  <!-- ===========================
+       SECTION 4: VIDEO
+  ============================ -->
   <section id="video" style="background-image: url('Link_anh/Background4.png');">
     <div class="section-title" style="color: red;">KỂ CHUYỆN SINH ĐỘNG, TRUYỀN TẢI KIẾN THỨC</div>
     <p class="section-description">
@@ -123,7 +133,9 @@
     </div>
   </section>
 
-  <!-- ========== SECTION 5: SCORM ========== -->
+  <!-- ===========================
+       SECTION 5: SCORM
+  ============================ -->
   <section id="scorm" style="background-image: url('Link_anh/Background5.png');">
     <div class="section-title" style="color: #003366;">TƯƠNG TÁC TRỰC TIẾP, HỌC SÂU NHỚ LÂU</div>
     <p class="section-description">
@@ -149,24 +161,24 @@
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
+  <!-- ===========================
+       FOOTER - LIÊN HỆ
+  ============================ -->
   <footer class="footer">
     <div class="footer-container">
       <div class="contact-content">
         <h3>LIÊN HỆ:</h3>
-        <p><i class="fas fa-user"></i> Mr. Nguyễn Duy Anh</p>
-        <p><i class="fas fa-phone"></i> 0972 173 972</p>
-        <p><i class="fas fa-envelope"></i> anhnd.design@gmail.com</p>
-        <p><i class="fas fa-globe"></i>
-          <a href="https://anhnd-design.github.io/anhnd/" style="color: white; text-decoration: none;">
-            https://anhnd-design.github.io/anhnd/
-          </a>
-        </p>
+        <p><i class="fas fa-user"></i>Mr. Nguyễn Duy Anh</p>
+        <p><i class="fas fa-phone"></i>0972 173 972</p>
+        <p><i class="fas fa-envelope"></i>anhnd.design@gmail.com</p>
+        <p><i class="fas fa-globe"></i><a href="https://anhnd-design.github.io/anhnd/" style="color: white; text-decoration: none;">https://anhnd-design.github.io/anhnd/</a></p>
       </div>
     </div>
   </footer>
 
-  <!-- ========== SCRIPT: Highlight tab khi click ========== -->
+  <!-- ===========================
+       SCRIPT: TAB HIGHLIGHT
+  ============================ -->
   <script>
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {

@@ -51,6 +51,24 @@
     .navbar a.active {
       color: red;
     }
+.nav-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav-link {
+  margin: 0 10px;
+  text-decoration: none;
+  color: gray;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  white-space: nowrap; /* Không cho chữ xuống dòng */
+}
+
+
 /* ✅ MOBILE: Các tab đều ra 1 dòng, để không bị xuống dòng */
 @media (max-width: 480px) {
   .nav-inner {
@@ -288,14 +306,15 @@
   <!-- ==========================
        MENU ĐIỀU HƯỚNG
   =========================== -->
-  <div class="navbar">
+<div class="navbar">
+  <div class="nav-inner">
     <a href="#home" class="nav-link active">Home</a>
     <a href="#poster" class="nav-link">Poster</a>
     <a href="#slide" class="nav-link">Slide</a>
     <a href="#video" class="nav-link">Video</a>
     <a href="#scorm" class="nav-link">Scorm</a>
   </div>
-
+</div>
   <!-- ==========================
        SECTION 1: HOME
   =========================== -->

@@ -33,7 +33,7 @@
       display: flex;
       flex-wrap: wrap;  /* ✅ Cho phép wrap khi màn hình nhỏ */
       justify-content: center;
-      padding: 15px 0;
+      padding: 20px 0;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       z-index: 999;
     }
@@ -43,7 +43,7 @@
       text-decoration: none;
       color: gray;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 18px;
       transition: color 0.3s ease;
     }
 
@@ -62,13 +62,13 @@
 @media (max-width: 768px) {
   .nav-inner {
     justify-content: space-evenly; /* Dàn đều trên mobile */
-    gap: 2px; /* Giảm khoảng cách nếu cần */
+    gap: 1px; /* Giảm khoảng cách nếu cần */
     width: 100%;
   }
 
   .nav-link {
     font-size: 10px;
-    padding: 3px 5px;
+    padding: 2px 2px;
   }
 }
 

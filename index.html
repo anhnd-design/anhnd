@@ -69,6 +69,36 @@
     #poster, #slide, #video, #scorm {
       padding: 150px 50px 50px 70px;
     }
+.navbar {
+  display: flex;
+  flex-wrap: wrap; /* cho phép tự động xuống dòng nếu quá dài */
+  justify-content: center;
+  gap: 10px;  /* giảm khoảng cách giữa các tab */
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-link {
+  font-size: 14px; /* giảm size cho phù hợp mobile */
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #444;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: color 0.3s ease;
+  white-space: nowrap; /* giữ text trên 1 dòng */
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #d62828;
+  background-color: transparent;
+}
 
     /* ==========================
        KHUNG CHỨA TEXT GIỚI THIỆU

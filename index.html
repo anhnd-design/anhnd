@@ -24,40 +24,28 @@
     /* ==========================
        THANH MENU (NAVBAR)
     =========================== */
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: white;
-      display: flex;
-      flex-wrap: wrap;  /* ✅ Cho phép wrap khi màn hình nhỏ */
-      justify-content: center;
-      padding: 15px 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      z-index: 999;
-    }
-
-    .navbar a {
-      margin: 0 20px;
-      text-decoration: none;
-      color: gray;
-      font-weight: bold;
-      font-size: 18px;
-      transition: color 0.3s ease;
-    }
-.navbar a:hover {
-  color: red;
+/* ============================
+   NAVBAR CHUNG CHO DESKTOP
+============================ */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
 }
-    .navbar a.active {
-      color: red;
-    }
+
+/* Bọc các tab */
 .nav-inner {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
 }
 
+/* Từng tab */
 .nav-link {
   margin: 0 10px;
   text-decoration: none;
@@ -65,27 +53,32 @@
   font-weight: bold;
   font-size: 18px;
   transition: color 0.3s ease;
-  white-space: nowrap; /* Không cho chữ xuống dòng */
+  white-space: nowrap;
 }
 
+.nav-link:hover,
+.nav-link.active {
+  color: red;
+}
 
-/* ✅ MOBILE: Các tab đều ra 1 dòng, để không bị xuống dòng */
+/* ============================
+   RESPONSIVE CHO MOBILE
+============================ */
 @media (max-width: 480px) {
   .nav-inner {
     justify-content: space-evenly;
-    flex-wrap: nowrap;       /* 👈 Không cho wrap */
-    gap: 1px;                 /* 👈 Giảm khoảng cách giữa các tab */
-    width: 100%;
+    flex-wrap: nowrap;    /* ✅ Không cho tab xuống dòng */
+    overflow-x: auto;     /* ✅ Cho phép cuộn ngang nếu cần */
+    gap: 2px;
+    padding: 0 6px;
   }
 
   .nav-link {
-    font-size: 7px;
-    padding: 1px 1px;
-    white-space: nowrap;     /* 👈 Không xuống dòng trong từng tab */
-    flex-shrink: 1;          /* 👈 Co lại nếu cần để vừa màn hình */
+    font-size: 10px;       /* ✅ Giảm kích thước để vừa khung */
+    padding: 4px 6px;
+    flex-shrink: 1;        /* ✅ Cho phép co lại */
   }
 }
-
 
 
 
@@ -314,8 +307,7 @@
     <a href="#video" class="nav-link">Video</a>
     <a href="#scorm" class="nav-link">Scorm</a>
   </div>
-</div>
-  <!-- ==========================
+</div>  <!-- ==========================
        SECTION 1: HOME
   =========================== -->
 <section id="home" style="background-image: url('Link_anh/Background1.png');">

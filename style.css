@@ -1,91 +1,31 @@
-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  scroll-margin-top: 100px;
-  padding: 40px 20px;
+:root {
+  --navbar-height: 100px;
 }
 
-/* Khối nội dung bên trong mỗi section */
-.section-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1200px;
-  width: 100%;
+html {
+  scroll-padding-top: var(--navbar-height);
 }
 
-/* Tiêu đề của section */
-.section-title {
-  text-align: center;
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 30px;
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-/* Mô tả section */
-.section-description {
-  text-align: center;
-  font-style: italic;
-  color: black;
-  max-width: 800px;
-  margin: 0 auto 40px auto;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-/* Cards layout */
-.cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-/* Card item */
-.card {
-  width: 300px;
-  border-radius: 12px;
-  overflow: hidden;
+body {
   background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
-  transform: scale(1.07);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
-}
-
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.card p {
-  padding: 10px;
-  color: gray;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-/* Navbar cố định */
+/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   background-color: white;
   padding: 15px 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 999;
 }
 
@@ -103,11 +43,150 @@ section {
   font-weight: bold;
   font-size: 20px;
   transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
 .nav-link:hover,
 .nav-link.active {
   color: red;
+}
+
+/* Mobile navbar */
+@media (max-width: 480px) {
+  .nav-inner {
+    overflow-x: auto;
+    gap: 2px;
+    padding: 0 6px;
+  }
+  .nav-link {
+    font-size: 14px;
+    margin: 0 2px;
+  }
+}
+
+/* Section */
+section {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  scroll-margin-top: var(--navbar-height);
+}
+
+.section-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  padding-top: 60px;
+}
+
+/* Title & mô tả */
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.section-description {
+  text-align: center;
+  color: black;
+  font-style: italic;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 22px;
+  }
+  .section-description {
+    padding: 0 15px;
+  }
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.card {
+  width: 300px;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: gray;
+}
+
+/* Responsive card */
+@media (max-width: 768px) {
+  .card {
+    width: 90vw;
+    max-width: 320px;
+  }
+
+  .card img {
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+}
+
+/* Home section riêng */
+.home-container {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .decor {
+    max-width: 80%;
+  }
 }
 
 /* Footer */
@@ -131,45 +210,25 @@ section {
 }
 
 .contact-content p {
-  font-size: 14px;
   margin: 10px 0;
+  font-size: 14px;
 }
 
 .contact-content i {
   margin-right: 10px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 26px;
-  }
-
-  .card {
-    width: 90vw;
-    max-width: 320px;
-  }
-
-  .section-description {
-    padding: 0 10px;
-  }
-
-  .navbar .nav-inner {
-    padding: 0 6px;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-  }
-
-  .nav-link {
-    font-size: 14px;
-    margin: 0 2px;
+@media (max-width: 480px) {
+  .contact-content {
+    font-size: 13px;
+    line-height: 1.6;
   }
 
   .footer h3 {
     font-size: 15px;
   }
 
-  .contact-content {
-    font-size: 13px;
+  .contact-content i {
+    margin-right: 6px;
   }
 }

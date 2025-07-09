@@ -42,7 +42,7 @@
       text-decoration: none;
       color: gray;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 18px;
       transition: color 0.3s ease;
     }
 .navbar a:hover {
@@ -51,8 +51,22 @@
     .navbar a.active {
       color: red;
     }
-/* ✅ MOBILE: dàn đều ra để không bị xuống dòng */
+/* ✅ MOBILE: Các tab đều ra 1 dòng, để không bị xuống dòng */
+@media (max-width: 480px) {
+  .nav-inner {
+    justify-content: space-evenly;
+    flex-wrap: nowrap;       /* 👈 Không cho wrap */
+    gap: 2px;                 /* 👈 Giảm khoảng cách giữa các tab */
+    width: 100%;
+  }
 
+  .nav-link {
+    font-size: 11px;
+    padding: 4px 6px;
+    white-space: nowrap;     /* 👈 Không xuống dòng trong từng tab */
+    flex-shrink: 1;          /* 👈 Co lại nếu cần để vừa màn hình */
+  }
+}
 
 
 
@@ -596,3 +610,4 @@
   </script>
 </body>
 </html>
+

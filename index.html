@@ -39,23 +39,20 @@
 
 .nav-inner {
   display: flex;
+  justify-content: center;
   flex-wrap: nowrap;
-  justify-content: center; /* ✅ Mặc định cho PC */
-  gap: 20px;
-  max-width: 100%;
-  box-sizing: border-box;
+  gap: 20px; /* Khoảng cách giữa các tab */
 }
 
 .nav-link {
   font-size: 15px;
+  flex-shrink: 1;       /* 👈 Cho phép co lại để vừa 1 dòng */
   font-weight: 600;
+  text-transform: none;
   color: gray;
   text-decoration: none;
   white-space: nowrap;
   transition: color 0.3s ease;
-  flex: 1 1 auto;
-  text-align: center;
-  min-width: 60px;
 }
 
 .nav-link.active,
@@ -63,16 +60,18 @@
   color: red;
 }
 
+
+
 /* ✅ MOBILE: dàn đều ra để không bị xuống dòng */
 @media (max-width: 480px) {
   .nav-inner {
     justify-content: space-evenly; /* Dàn đều trên mobile */
-    gap: 8px; /* Giảm khoảng cách nếu cần */
+    gap: 4px; /* Giảm khoảng cách nếu cần */
     width: 100%;
   }
 
   .nav-link {
-    font-size: 13px;
+    font-size: 11px;
     padding: 4px 6px;
   }
 }

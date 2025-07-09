@@ -53,21 +53,9 @@
     }
 /* ✅ MOBILE: dàn đều ra để không bị xuống dòng */
 
-@media (max-width: 480px) {
-  .nav-inner {
-    justify-content: space-evenly;
-    flex-wrap: nowrap;       /* 👈 Không cho wrap */
-    gap: 4px;                 /* 👈 Giảm khoảng cách giữa các tab */
-    width: 100%;
-  }
 
-  .nav-link {
-    font-size: 11px;
-    padding: 4px 6px;
-    white-space: nowrap;     /* 👈 Không xuống dòng trong từng tab */
-    flex-shrink: 1;          /* 👈 Co lại nếu cần để vừa màn hình */
-  }
-}
+
+
 
 
 /* ✅ MOBILE: Card không bị co thành hình vuông */
@@ -231,7 +219,7 @@
 }
 
 .card:hover {
-  transform: scale(1.0); /* 👈 Phóng to nhẹ khi rê chuột */
+  transform: scale(1.07); /* 👈 Phóng to nhẹ khi rê chuột */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* 👈 Đổ bóng đậm hơn */
 }
 /* ==== RESPONSIVE CHO MOBILE ==== */

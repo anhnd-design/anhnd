@@ -35,24 +35,29 @@
   padding: 10px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 999;
+  overflow-x: hidden; /* tránh tràn ngang */
 }
 
 .nav-inner {
   display: flex;
-  justify-content: center;
   flex-wrap: nowrap;
-  gap: 20px; /* Khoảng cách giữa các tab */
+  justify-content: center;
+  gap: 20px;
+  max-width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .nav-link {
   font-size: 15px;
-  flex-shrink: 1;       /* 👈 Cho phép co lại để vừa 1 dòng */
   font-weight: 600;
-  text-transform: none;
   color: gray;
   text-decoration: none;
   white-space: nowrap;
   transition: color 0.3s ease;
+  flex: 1 1 auto; /* 👈 Cho phép tự co dãn đều nhau */
+  text-align: center;
+  min-width: 60px; /* giới hạn nhỏ tối thiểu để co đủ 5 tab */
 }
 
 .nav-link.active,
@@ -62,15 +67,14 @@
 
 @media (max-width: 480px) {
   .nav-inner {
-    gap: 4px; /* Giảm khoảng cách tab trên điện thoại */
+    gap: 4px;
   }
 
   .nav-link {
-    font-size: 13px;
+    font-size: 12px;
+    padding: 4px 6px;
   }
 }
-
-
 
     
     /* ==========================

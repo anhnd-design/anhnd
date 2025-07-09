@@ -209,7 +209,60 @@
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   background-color: #e9f5ff;
 }
+  /* ✅ Responsive đt */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
+  .navbar a {
+    margin: 8px 12px;
+    font-size: 14px;
+  }
+
+  .content {
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .section-description {
+    padding: 0 10px;
+  }
+
+  /* ✅ Đảm bảo card có tỷ lệ chữ nhật và không mất nền */
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: inherit; /* 👈 giữ nguyên màu nền cha nếu có */
+    padding-bottom: 30px;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    background-color: white; /* 👈 nếu cần màu nền rõ */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .card p {
+    padding: 12px;
+    font-size: 14px;
+    color: #333;
+  }
+}
 
     /* ==========================
        FOOTER

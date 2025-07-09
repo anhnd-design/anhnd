@@ -149,7 +149,15 @@ section {
   }
 
   .content {
-    max-width: 90%;
+    max-width: 95%;
+  }
+.content p {
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 0 5px;
+    margin: 0 auto;
+    max-width: 95vw;
+    text-align: justify; /* hoặc center nếu muốn */
   }
 
   .decor {

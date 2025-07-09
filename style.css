@@ -75,7 +75,13 @@ section {
   background-size: cover;
   background-position: center;
   color: white;
+
+  /* ✅ Căn giữa nội dung trong section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 
 .section-title {
   text-align: center;
@@ -113,7 +119,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 250px 50px 50px 70px;
+  padding: 50px 50px 50px 70px;
   flex-wrap: wrap;
 }
 

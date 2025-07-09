@@ -151,20 +151,25 @@ section {
   .content {
     max-width: 95%;
   }
-.content p {
+
+  .content h1,
+  .content h3,
+  .content p {
+    margin: 10px auto;
+    max-width: 95vw;
+    text-align: center;
+  }
+
+  .content p {
     font-size: 15px;
     line-height: 1.6;
     padding: 0 5px;
-    margin: 0 auto;
-    max-width: 95vw;
-    text-align: center; /* hoặc center nếu muốn */
   }
 
   .decor {
     max-width: 80%;
   }
 }
-
 /* ===========================
    TIÊU ĐỀ & MÔ TẢ SECTION
 =========================== */

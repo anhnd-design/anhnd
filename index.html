@@ -30,29 +30,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Navbar Fix</title>
+  <title>Navbar Fixed</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
     .navbar {
       position: fixed;
       top: 0;
       width: 100%;
       background-color: white;
       display: flex;
-      flex-wrap: wrap;  /* Cho phép wrap khi thật sự cần */
       justify-content: center;
+      flex-wrap: nowrap;
       padding: 12px 0;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       z-index: 999;
     }
 
     .navbar a {
-      margin: 5px 12px;                  /* ✅ Giảm margin để tránh giãn dòng */
+      flex: 1; /* ✅ Tự chia đều chiều rộng */
+      text-align: center;
       text-decoration: none;
       color: gray;
       font-weight: bold;
-      font-size: 15px;                   /* ✅ Giảm font cho vừa mobile */
+      font-size: 15px;
       transition: color 0.3s ease;
-      white-space: nowrap;              /* ✅ Không cho chữ tự xuống dòng */
+      white-space: nowrap;
     }
 
     .navbar a.active,
@@ -60,11 +70,13 @@
       color: red;
     }
 
-    /* Responsive cải tiến nhỏ cho thiết bị rất nhỏ */
-    @media (max-width: 360px) {
+    @media (max-width: 480px) {
+      .navbar {
+        padding: 10px 0;
+      }
+
       .navbar a {
-        font-size: 14px;
-        margin: 4px 8px;
+        font-size: 13px;
       }
     }
   </style>
@@ -78,8 +90,8 @@
     <a href="#scorm" class="nav-link">SCORM</a>
   </div>
 
-  <!-- Dummy content để test scroll -->
-  <div style="margin-top: 80px; padding: 20px;">
+  <!-- Nội dung mẫu -->
+  <div style="margin-top: 70px; padding: 20px;">
     <h2 id="home">Home Section</h2>
     <p>...</p>
     <h2 id="poster">Poster Section</h2>

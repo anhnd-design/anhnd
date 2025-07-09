@@ -31,12 +31,12 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 150px 50px 50px 70px;
+  padding: 50px 50px 50px 70px;
 }
 
 
 #home {
-  padding: 250px 50px 50px 70px; /* Section HOME có padding-top nhiều hơn */
+  padding: 200px 50px 50px 70px; /* Section HOME có padding-top nhiều hơn */
 }
 
 /* ===========================

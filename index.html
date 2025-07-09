@@ -168,36 +168,57 @@
     /* ==========================
        KHUNG HIỂN THỊ CÁC CARD
     =========================== */
-    .cards {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+ /* ==== CARD DESKTOP & MOBILE ==== */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
-    .card {
-      width: 300px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      background-color: white;
-      text-align: center;
-      cursor: pointer;
-      text-decoration: none; /* ✅ Bỏ gạch chân */
-      color: inherit;         /* ✅ Giữ nguyên màu chữ */
-    }
+.card {
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none; /* ✅ Bỏ gạch chân */
+  color: inherit;         /* ✅ Giữ nguyên màu chữ */
+  display: flex;
+  flex-direction: column;
+}
 
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
+/* Hình ảnh giữ đúng tỷ lệ */
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
 
-    .card p {
-      padding: 10px;
-      color: gray;
-      font-weight: bold;
-    }
+/* Text trong card */
+.card p {
+  padding: 10px;
+  color: gray;
+  font-weight: bold;
+}
+
+/* ==== RESPONSIVE CHO MOBILE ==== */
+@media (max-width: 768px) {
+  .card {
+    width: 90vw;       /* ✅ co lại vừa màn hình nhưng vẫn giữ tỷ lệ chữ nhật */
+    max-width: 320px;  /* ✅ không to hơn 320px */
+  }
+
+  .card img {
+    height: 160px;     /* ✅ giảm chiều cao ảnh nếu cần */
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+}
 
     /* ==========================
        RESPONSIVE CHO MOBILE

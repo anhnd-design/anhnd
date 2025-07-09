@@ -28,12 +28,12 @@ section {
   background-position: center;
   color: white;
 
-  /* Căn giữa nội dung theo chiều dọc toàn section */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 150px 50px 50px 70px; /* Có padding trên để tạo khoảng trống */
+  padding: 150px 50px 50px 70px;
 }
+
 
 #home {
   padding: 250px 50px 50px 70px; /* Section HOME có padding-top nhiều hơn */

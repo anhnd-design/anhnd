@@ -70,13 +70,14 @@
     justify-content: center;
     flex-wrap: nowrap;    /* ✅ Không cho tab xuống dòng */
     overflow-x: auto;     /* ✅ Cho phép cuộn ngang nếu cần */
-    gap: 0px;
+    gap: 2px;
     padding: 0 6px;
   }
 
   .nav-link {
     font-size: 14px;       /* ✅ Giảm kích thước để vừa khung */
-    padding: 5px 8px;
+    padding: 4px 6px;
+    margin: 0 2px; /* 👈 Ghi đè lại margin cho mobile */
     flex-shrink: 1;        /* ✅ Cho phép co lại */
   }
 }

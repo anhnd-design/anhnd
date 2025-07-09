@@ -179,14 +179,15 @@ margin-bottom: 50px;   /* Tạo khoảng cách phía dưới phần tử */}
 
 @media (max-width: 480px) {
   .section-title {
-    font-size: 22px;
+    font-size: 20px;
     margin: 0 auto 30px auto;
-    max-width: 90vw; /* 👈 cho phép chiếm gần hết chiều ngang màn hình */
-    line-height: 1.4;
+    max-width: 95vw; /* 👈 cho phép chiếm gần hết chiều ngang màn hình */
+    line-height: 1.6;
   }
 }
   .section-description {
     font-size: 16px;
+  max-width: 95vw;
     padding: 0 5px;
   }
 }

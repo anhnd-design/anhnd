@@ -53,6 +53,28 @@
       color: red;
     }
 
+.navbar {
+  display: flex;
+  flex-wrap: nowrap;      /* ✅ Không cho xuống dòng */
+  overflow-x: auto;        /* ✅ Nếu quá hẹp vẫn cho cuộn ngang nhẹ (bảo toàn đủ 5 mục) */
+  white-space: nowrap;     /* ✅ Giữ toàn bộ trên 1 dòng */
+  justify-content: space-between;
+}
+
+.navbar a {
+  flex: 1;                 /* ✅ Các tab chia đều chiều ngang */
+  text-align: center;
+  white-space: nowrap;     /* ✅ Ngăn chữ bị xuống dòng */
+  font-size: 15px;
+  padding: 8px 10px;
+}
+
+@media (max-width: 480px) {
+  .navbar a {
+    font-size: 13px;       /* ✅ Co chữ trên màn nhỏ */
+    padding: 6px 8px;
+  }
+}
 
 
 

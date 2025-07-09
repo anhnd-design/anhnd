@@ -188,7 +188,15 @@ margin-bottom: 50px;   /* Tạo khoảng cách phía dưới phần tử */}
     padding: 0 5px;
   }
 }
+.mobile-break {
+  display: inline;
+}
 
+@media (max-width: 480px) {
+  .mobile-break {
+    display: block;
+  }
+}
 /* ===========================
    CARD & LƯỚI HIỂN THỊ
 =========================== */

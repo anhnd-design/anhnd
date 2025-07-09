@@ -16,6 +16,9 @@ body {
 /* ===========================
    CẤU HÌNH CHUNG
 =========================== */
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --navbar-height: 100px; /* Chiều cao thanh menu để offset cuộn */
 }

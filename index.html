@@ -24,7 +24,6 @@
     /* ==========================
        THANH MENU (NAVBAR)
     =========================== */
-
     .navbar {
       position: fixed;
       top: 0;
@@ -33,7 +32,7 @@
       display: flex;
       flex-wrap: wrap;  /* ✅ Cho phép wrap khi màn hình nhỏ */
       justify-content: center;
-      padding: 20px 0;
+      padding: 15px 0;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       z-index: 999;
     }
@@ -43,21 +42,13 @@
       text-decoration: none;
       color: gray;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 16px;
       transition: color 0.3s ease;
     }
 
     .navbar a.active {
       color: red;
     }
-
-.nav-link.active,
-.nav-link:hover {
-  color: red;
-}
-
-
-
 /* ✅ MOBILE: dàn đều ra để không bị xuống dòng */
 @media (max-width: 768px) {
   .nav-inner {
@@ -95,7 +86,6 @@
       font-size: 16px;
       line-height: 1.8;
     }
-
     /* ==========================
        CÀI ĐẶT CHUNG CHO SECTION
     =========================== */
@@ -117,45 +107,48 @@
     }
 
     /* ==========================
+       KHUNG CHỨA TEXT GIỚI THIỆU
+    =========================== */
+    .content {
+      max-width: 40%;
+    }
+
+    .content h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .content h3 {
+      font-style: italic;
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .content p {
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* ==========================
        TIÊU ĐỀ & MÔ TẢ MỖI PHẦN
     =========================== */
-/* ===========================
-   TIÊU ĐỀ & MÔ TẢ MỖI PHẦN
-   =========================== */
-.section-title {
-  text-align: center;
-  font-size: 36px;            /* 👈 Kích thước tiêu đề lớn trên PC */
-  font-weight: bold;
-  margin-bottom: 50px;
-}
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 50px;
+    }
 
-.section-description {
-  text-align: center;
-  font-style: italic;
-  color: black;
-  max-width: 800px;
-  margin: 0 auto 40px auto;
-  font-size: 16px;            /* 👈 Cỡ chữ mô tả trên PC */
-  line-height: 1.6;
-}
+    .section-description {
+      text-align: center;
+      font-style: italic;
+      color: black;
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      font-size: 16px;
+      line-height: 1.6;
+    }
 
-/* ================
-   CHO MÀN HÌNH MOBILE
-   ================ */
-@media (max-width: 480px) {
-  .section-title {
-    font-size: 22px;          /* 👈 Giảm size tiêu đề trên điện thoại */
-    margin-bottom: 30px;
-  }
-
-  .section-description {
-    font-size: 14px;          /* 👈 Giảm size mô tả */
-    padding: 0 15px;          /* 👈 Thêm padding ngang cho đẹp */
-  }
-}
-
-
-    
     /* ==========================
        KHUNG HIỂN THỊ CÁC CARD
     =========================== */
@@ -189,38 +182,54 @@
       color: gray;
       font-weight: bold;
     }
-.card {
-  width: 300px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  background-color: white;
-  text-align: center;
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-
-  /* ✅ Mượt mà hiệu ứng scale và shadow */
-  transition: transform 0.5s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  background-color: #e9f5ff;
-}
-  /* ✅ Responsive đt */
 
     /* ==========================
        FOOTER
     =========================== */
- 
+    footer {
+      background-image: url('Link_anh/Background6.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
 
     /* ==========================
        RESPONSIVE CHO MOBILE
     =========================== */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
 
+      .navbar a {
+        margin: 8px 12px;
+        font-size: 14px;
+      }
 
+      .content {
+        max-width: 90%;
+        margin: auto;
+        text-align: center;
+      }
+
+      .section-description {
+        padding: 0 10px;
+      }
+
+      .card {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -233,23 +242,7 @@
     <a href="#slide" class="nav-link">Slide</a>
     <a href="#video" class="nav-link">Video</a>
     <a href="#scorm" class="nav-link">Scorm</a>
-
   </div>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Portfolio</title>
-
-
-
-
-
-    
-</head>
-<body>
-  <!-- Navbar và nội dung khác -->
-</body>
-</html>
 
   <!-- ==========================
        SECTION 1: HOME
@@ -337,7 +330,7 @@
 
     <!-- Nội dung chữ bên trái -->
     <div class="content">
-      <h1>LEARNING MATERIALS</h1>
+      <h1>LEARNING MATERIAL</h1>
       <h3>Truyền cảm hứng qua từng sản phẩm đào tạo</h3>
       <p>
         Đây là không gian giới thiệu các sản phẩm học liệu sáng tạo của tôi, nơi kết hợp giữa thiết kế trực quan và tính ứng dụng thực tế. Mỗi sản phẩm không chỉ truyền tải kiến thức mà còn mang lại trải nghiệm học tập thú vị và hiệu quả. Hãy cùng khám phá cách học liệu có thể chạm đến cảm xúc người học.
@@ -538,7 +531,6 @@
     }
   }
 </style>
-
 
   <!-- ==========================
        SCRIPT: HIGHLIGHT TAB

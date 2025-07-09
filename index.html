@@ -483,13 +483,71 @@
   <!-- ==========================
        FOOTER
   =========================== -->
-  <footer>
-    <p>LIÊN HỆ:</p>
-    <p>Mr. Nguyễn Duy Anh</p>
-    <p>0972 173 972</p>
-    <p>anhnd.design@gmail.com</p>
-    <p><a href="https://anhnd-design.github.io/anhnd/" target="_blank">https://anhnd-design.github.io/anhnd/</a></p>
-  </footer>
+<div class="contact-section">
+  <div class="vertical-line"></div>
+  <div class="contact-info">
+    <p class="contact-title">LIÊN HỆ:</p>
+    <p><i class="fas fa-user"></i> Mr. Nguyễn Duy Anh</p>
+    <p><i class="fas fa-phone"></i> 0972 173 972</p>
+    <p><i class="fas fa-envelope"></i> anhnd.design@gmail.com</p>
+    <p><i class="fas fa-globe"></i> <a href="https://anhnd-design.github.io/anhnd/" target="_blank">https://anhnd-design.github.io/anhnd/</a></p>
+  </div>
+</div>
+
+
+.contact-section {
+  display: flex;
+  align-items: flex-start;
+  color: white;
+  margin-top: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.vertical-line {
+  width: 2px;
+  height: 140px;
+  background-color: white;
+  margin-right: 20px;
+}
+
+.contact-info {
+  text-align: left;
+}
+
+.contact-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.contact-info p {
+  margin: 6px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info i {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 6px;
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 12px;
+  font-size: 12px;
+}
+.contact-info a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+
+  
 
   <!-- ==========================
        SCRIPT: HIGHLIGHT TAB

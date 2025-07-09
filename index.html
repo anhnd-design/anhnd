@@ -24,38 +24,80 @@
     /* ==========================
        THANH MENU (NAVBAR)
     =========================== */
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar Fix</title>
+  <style>
     .navbar {
       position: fixed;
       top: 0;
       width: 100%;
       background-color: white;
       display: flex;
-      flex-wrap: wrap;  /* ✅ Cho phép wrap khi màn hình nhỏ */
+      flex-wrap: wrap;  /* Cho phép wrap khi thật sự cần */
       justify-content: center;
-      padding: 15px 0;
+      padding: 12px 0;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       z-index: 999;
     }
 
     .navbar a {
-      margin: 0 20px;
+      margin: 5px 12px;                  /* ✅ Giảm margin để tránh giãn dòng */
       text-decoration: none;
       color: gray;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 15px;                   /* ✅ Giảm font cho vừa mobile */
       transition: color 0.3s ease;
+      white-space: nowrap;              /* ✅ Không cho chữ tự xuống dòng */
     }
 
-    .navbar a.active {
+    .navbar a.active,
+    .navbar a:hover {
       color: red;
     }
 
-.nav-link:hover,
-.nav-link.active {
-  color: #d62828;
-  background-color: transparent;
-}
+    /* Responsive cải tiến nhỏ cho thiết bị rất nhỏ */
+    @media (max-width: 360px) {
+      .navbar a {
+        font-size: 14px;
+        margin: 4px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="#home" class="nav-link active">HOME</a>
+    <a href="#poster" class="nav-link">POSTER</a>
+    <a href="#slide" class="nav-link">SLIDE</a>
+    <a href="#video" class="nav-link">VIDEO</a>
+    <a href="#scorm" class="nav-link">SCORM</a>
+  </div>
 
+  <!-- Dummy content để test scroll -->
+  <div style="margin-top: 80px; padding: 20px;">
+    <h2 id="home">Home Section</h2>
+    <p>...</p>
+    <h2 id="poster">Poster Section</h2>
+    <p>...</p>
+    <h2 id="slide">Slide Section</h2>
+    <p>...</p>
+    <h2 id="video">Video Section</h2>
+    <p>...</p>
+    <h2 id="scorm">Scorm Section</h2>
+    <p>...</p>
+  </div>
+</body>
+</html>
+
+
+
+
+    
     /* ==========================
        KHUNG CHỨA TEXT GIỚI THIỆU
     =========================== */

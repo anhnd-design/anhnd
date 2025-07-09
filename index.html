@@ -119,22 +119,41 @@
     /* ==========================
        TIÊU ĐỀ & MÔ TẢ MỖI PHẦN
     =========================== */
-    .section-title {
-      text-align: center;
-      font-size: 36px;
-      font-weight: bold;
-      margin-bottom: 50px;
-    }
+/* ===========================
+   TIÊU ĐỀ & MÔ TẢ MỖI PHẦN
+   =========================== */
+.section-title {
+  text-align: center;
+  font-size: 36px;            /* 👈 Kích thước tiêu đề lớn trên PC */
+  font-weight: bold;
+  margin-bottom: 50px;
+}
 
-    .section-description {
-      text-align: center;
-      font-style: italic;
-      color: black;
-      max-width: 800px;
-      margin: 0 auto 40px auto;
-      font-size: 16px;
-      line-height: 1.6;
-    }
+.section-description {
+  text-align: center;
+  font-style: italic;
+  color: black;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  font-size: 16px;            /* 👈 Cỡ chữ mô tả trên PC */
+  line-height: 1.6;
+}
+
+/* ================
+   CHO MÀN HÌNH MOBILE
+   ================ */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 22px;          /* 👈 Giảm size tiêu đề trên điện thoại */
+    margin-bottom: 30px;
+  }
+
+  .section-description {
+    font-size: 14px;          /* 👈 Giảm size mô tả */
+    padding: 0 15px;          /* 👈 Thêm padding ngang cho đẹp */
+  }
+}
+
 
     
     /* ==========================

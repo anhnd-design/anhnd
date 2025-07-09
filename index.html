@@ -53,27 +53,20 @@
     }
 /* ✅ MOBILE: dàn đều ra để không bị xuống dòng */
 @media (max-width: 768px) {
-  .nav-inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;           /* ❗ Không cho xuống dòng */
-    overflow-x: auto;            /* ✅ Nếu không đủ chỗ thì cuộn ngang */
-    gap: 2px;                    /* ✅ Tạo khoảng cách hợp lý */
-    padding: 2px 3px;           /* ✅ Padding nhẹ cho bên trong */
-    width: 100%;
+  .card {
+    width: 90vw;         /* ✅ Chỉ dùng trên điện thoại */
+    max-width: 320px;    /* ✅ Không vượt quá kích thước này */
+    margin: 0 auto;      /* ✅ Canh giữa card */
   }
 
-  .nav-link {
-    font-size: 12px;
-    padding: 4px 6px;
-    white-space: nowrap;         /* ✅ Không cho ngắt dòng trong tab */
-    color: gray;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  .card img {
+    height: 160px;       /* ✅ Giữ tỷ lệ ảnh chữ nhật */
   }
 
+  .card p {
+    font-size: 14px;
+  }
+}
     
     /* ==========================
        KHUNG CHỨA TEXT GIỚI THIỆU

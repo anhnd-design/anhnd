@@ -470,41 +470,67 @@
   <!-- ==========================
        FOOTER
   =========================== -->
+<!-- Link đến Font Awesome để dùng icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <footer style="
-  background-image: url('Link_anh/Background6.png');
+  background-image: url('Link_anh/Background6.png');  /* 🌄 Nền phần liên hệ */
   background-size: cover;
   background-position: center;
   color: white;
-  padding: 30px 20px;
-  line-height: 1.8;
-  text-align: left;
-  font-family: Arial, sans-serif;
+  padding: 40px 30px;
+  line-height: 2;
+  font-family: sans-serif;
 ">
+
+  <!-- Khối chứa toàn bộ phần liên hệ -->
   <div style="display: flex; align-items: flex-start;">
-    <div style="width: 2px; height: 140px; background-color: white; margin-right: 20px;"></div>
-    <div>
-      <p style="font-weight: bold; margin-bottom: 10px; font-size: 16px;">LIÊN HỆ:</p>
-      <p style="margin: 6px 0; font-size: 14px; display: flex; align-items: center;">
-        <i class="fas fa-user" style="border: 1px solid white; border-radius: 50%; padding: 6px; margin-right: 10px; width: 24px; height: 24px; text-align: center; line-height: 12px; font-size: 12px;"></i>
+
+    <!-- Thanh trắng dọc bên trái -->
+    <div style="
+      width: 4px;         /* 📏 Độ dày thanh */
+      height: 150px;      /* 📏 Chiều dài thanh */
+      background-color: white;
+      margin-right: 20px;
+      margin-top: 4px;
+    "></div>
+
+    <!-- Nội dung thông tin liên hệ -->
+    <div style="padding-left: 10px;">  <!-- 📦 Dịch nội dung sang phải -->
+
+      <!-- Tiêu đề -->
+      <h3 style="margin: 0 0 10px 0; font-size: 18px;">LIÊN HỆ:</h3>
+
+      <!-- Dòng 1: Tên -->
+      <p style="margin: 8px 0;">
+        <i class="fas fa-user" style="margin-right: 10px;"></i>
         Mr. Nguyễn Duy Anh
       </p>
-      <p style="margin: 6px 0; font-size: 14px; display: flex; align-items: center;">
-        <i class="fas fa-phone" style="border: 1px solid white; border-radius: 50%; padding: 6px; margin-right: 10px; width: 24px; height: 24px; text-align: center; line-height: 12px; font-size: 12px;"></i>
+
+      <!-- Dòng 2: Số điện thoại -->
+      <p style="margin: 8px 0;">
+        <i class="fas fa-phone" style="margin-right: 10px;"></i>
         0972 173 972
       </p>
-      <p style="margin: 6px 0; font-size: 14px; display: flex; align-items: center;">
-        <i class="fas fa-envelope" style="border: 1px solid white; border-radius: 50%; padding: 6px; margin-right: 10px; width: 24px; height: 24px; text-align: center; line-height: 12px; font-size: 12px;"></i>
+
+      <!-- Dòng 3: Email -->
+      <p style="margin: 8px 0;">
+        <i class="fas fa-envelope" style="margin-right: 10px;"></i>
         anhnd.design@gmail.com
       </p>
-      <p style="margin: 6px 0; font-size: 14px; display: flex; align-items: center;">
-        <i class="fas fa-globe" style="border: 1px solid white; border-radius: 50%; padding: 6px; margin-right: 10px; width: 24px; height: 24px; text-align: center; line-height: 12px; font-size: 12px;"></i>
-        <a href="https://anhnd-design.github.io/anhnd/" target="_blank" style="color: white; text-decoration: none;">
+
+      <!-- Dòng 4: Website -->
+      <p style="margin: 8px 0;">
+        <i class="fas fa-globe" style="margin-right: 10px;"></i>
+        <a href="https://anhnd-design.github.io/anhnd/" style="color: white; text-decoration: none;">
           https://anhnd-design.github.io/anhnd/
         </a>
       </p>
+      
     </div>
   </div>
 </footer>
+
 
   <!-- ==========================
        SCRIPT: HIGHLIGHT TAB

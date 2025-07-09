@@ -1,12 +1,20 @@
 /* ===========================
    TOÀN TRANG: RESET & FONT
 =========================== */
+:root {
+  --navbar-height: 72px;
+}
+
 * {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+html {
+  scroll-padding-top: var(--navbar-height);
 }
 
 body {
@@ -75,13 +83,18 @@ section {
   background-size: cover;
   background-position: center;
   color: white;
-
-  /* ✅ Căn giữa nội dung trong section */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  scroll-margin-top: var(--navbar-height);
 }
 
+/* Wrapper để căn giữa nội dung trong mỗi section */
+.section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding: 80px 20px 60px 20px;
+}
 
 .section-title {
   text-align: center;
@@ -119,7 +132,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 50px 50px 70px;
+  padding: 250px 50px 50px 70px;
   flex-wrap: wrap;
 }
 
@@ -282,4 +295,3 @@ section {
     font-size: 15px;
   }
 }
-

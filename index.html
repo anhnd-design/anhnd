@@ -189,5 +189,33 @@
     });
   });
 </script>
+  <script>
+  // Chặn chuột phải
+  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+  });
+</script>
+<script>
+  document.onkeydown = function (e) {
+    if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+      return false;
+    }
+  };
+</script>
+<script>
+  document.addEventListener('keydown', function (e) {
+    if (e.ctrlKey && e.key === 'u') {
+      e.preventDefault();
+    }
+  });
+</script>
+<script>
+  document.addEventListener('keydown', function (e) {
+    if (e.ctrlKey && (e.key === 'c' || e.key === 'a')) {
+      e.preventDefault();
+    }
+  });
+</script>
+
 </body>
 </html>

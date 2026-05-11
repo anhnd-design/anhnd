@@ -26,7 +26,13 @@ body {
 /* Mỗi section khi cuộn tới sẽ lùi xuống để không bị che tiêu đề */
 section {
   scroll-margin-top: 0px;
-  min-height: 100vh;
+  min-height: auto;
+  #poster,
+  #slide,
+  #video,
+  #scorm {
+  background-image: url('Link_anh/Background2.png');
+}
   background-size: cover;
   background-position: center;
   color: white;
@@ -34,13 +40,16 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 150px 50px 50px 70px;
+  padding: 100px 50px 60px 70px;
 }
 
-
+/* Thiết lập RIÊNG cho section Home */
 #home {
-  padding: 200px 50px 50px 70px; /* Section HOME có padding-top nhiều hơn */
+    min-height: 100vh !important; /* Ép riêng phần Home luôn cao bằng màn hình */
+    padding: 200px 50px 50px 70px; /* Giữ padding riêng như bạn đã chỉnh */
 }
+
+
 
 /* ===========================
    NAVBAR (THANH MENU)
@@ -75,7 +84,7 @@ section {
 
 .nav-link:hover,
 .nav-link.active {
-  color: red;
+  color: #2380FC;
 }
 
 /* Responsive cho NAVBAR trên Mobile */
@@ -117,15 +126,17 @@ section {
 }
 
 .content h3 {
-  font-style: italic;
   font-size: 20px;
   margin: 0 0 20px 20px;
+  color: #2380FC;
 }
 
 .content p {
+  font-style: italic;
   font-size: 16px;
   line-height: 1.8;
   margin-left: 20px;
+  color: #BFBFBF;
 }
 
 .deco-container {
@@ -186,7 +197,7 @@ margin-bottom: 50px;   /* Tạo khoảng cách phía dưới phần tử */}
 .section-description {
   text-align: center;
   font-style: italic;
-  color: black;
+  color: #BFBFBF;
   max-width: 800px;
   margin: 0 auto 40px auto;
   font-size: 16px;
@@ -296,11 +307,13 @@ margin-bottom: 50px;   /* Tạo khoảng cách phía dưới phần tử */}
 .contact-content h3 {
   margin: 8px 0 12px 0;
   font-size: 18px;
+  color: #BFBFBF;
 }
 
 .contact-content p {
   margin: 10px 0;
   font-size: 14px;
+  color: #BFBFBF;
 }
 
 .contact-content i {
@@ -321,3 +334,117 @@ margin-bottom: 50px;   /* Tạo khoảng cách phía dưới phần tử */}
     font-size: 15px;
   }
 }
+
+
+
+
+/* Gán nền chung cho cụm Section 2, 3, 4, 5 */
+#poster, #slide, #video, #scorm {
+    background-image: url('Link_anh/Background2.png') !important;
+    background-attachment: fixed !important; /* Ảnh đứng yên, nội dung trượt lên */
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    
+    /* Giữ nguyên các thuộc tính hiển thị cũ của bạn */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Đảm bảo nội dung bên trong không bị dồn lề */
+#poster { padding-top: 150px; } /* Để không bị đè bởi Navbar */
+
+/* ============================================================
+   HIỆU ỨNG MƯA TUYẾT DÀY ĐẶC, MỜ VIỀN & RƠI THẲNG TẮP
+============================================================ */
+
+/* 1. Thiết lập cho thẻ chứa trang chủ */
+#home {
+    position: relative;
+    overflow: hidden; /* Giữ tuyết không rơi ra ngoài */
+    /* Giữ nguyên các thuộc tính khác của bạn */
+}
+
+/* 2. Cấu hình lớp bao phủ tuyết */
+.snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Nằm dưới văn bản và trên hình nền */
+    pointer-events: none; /* Tránh cản trở chuột */
+}
+
+/* 3. Cấu hình TẠO HÌNH và HIỆU ỨNG RƠI của hạt tuyết */
+.snowflake {
+    position: absolute;
+    top: -10px; /* Bắt đầu từ phía trên màn hình */
+    background-color: transparent; /* Nền trong suốt */
+    
+    /* QUAN TRỌNG: Tạo hạt tuyết hình tròn, mờ viền (Blur effect) */
+    background-image: radial-gradient(
+        circle, 
+        rgba(255, 255, 255, 0.8) 0%,   /* Tâm trắng mờ */
+        rgba(255, 255, 255, 0.2) 60%,  /* Viền mờ dần */
+        rgba(255, 255, 255, 0) 100%    /* Tan biến hoàn toàn ở rìa */
+    );
+    border-radius: 50%; /* Làm cho hạt tuyết hình tròn */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Tạo độ sâu mờ ảo */
+    
+    /* Kích thước hạt tuyết nhỏ lại */
+    width: 6px;
+    height: 6px;
+
+    /* QUAN TRỌNG: Chỉ dùng animation RƠI THẲNG, xóa bỏ animation "shake" (lắc lư) */
+    animation-name: snowflakes-fall;
+    animation-timing-function: linear; /* Rơi đều */
+    animation-iteration-count: infinite;
+}
+
+/* 4. ĐỊNH NGHĨA CHUYỂN ĐỘNG RƠI THẲNG TẮP (Xóa bỏ shake) */
+@keyframes snowflakes-fall {
+    0% {
+        top: -10%;
+        transform: translateX(20px); /* Bắt đầu hơi lệch phải */
+    }
+    100% {
+        top: 100%;
+        transform: translateX(-100px); /* Kết thúc lệch sang trái 100px */
+    }
+}
+
+/* 5. TẠO ĐỘ DÀY ĐẶC VÀ SỰ NGẪU NHIÊN CHO 20 HẠT TUYẾT */
+/* (left: vị trí ngang, delay: độ trễ, duration: tốc độ rơi, opacity: độ mờ, size: kích thước) */
+
+.snowflake:nth-of-type(1) { left: 5%; animation-delay: 0s; animation-duration: 17s; opacity: 0.8; width: 6px; height: 6px; }
+.snowflake:nth-of-type(2) { left: 10%; animation-delay: 3s; animation-duration: 12s; opacity: 0.5; width: 4px; height: 4px; }
+.snowflake:nth-of-type(3) { left: 15%; animation-delay: 6s; animation-duration: 11s; opacity: 0.7; width: 5px; height: 5px; }
+.snowflake:nth-of-type(4) { left: 20%; animation-delay: 1.5s; animation-duration: 11s; opacity: 0.9; width: 7px; height: 7px; }
+.snowflake:nth-of-type(5) { left: 25%; animation-delay: 8s; animation-duration: 10s; opacity: 0.6; width: 4px; height: 4px; }
+.snowflake:nth-of-type(6) { left: 30%; animation-delay: 4.5s; animation-duration: 20s; opacity: 0.8; width: 6px; height: 6px; }
+.snowflake:nth-of-type(7) { left: 35%; animation-delay: 10s; animation-duration: 12s; opacity: 0.5; width: 5px; height: 5px; }
+.snowflake:nth-of-type(8) { left: 40%; animation-delay: 2s; animation-duration: 9s; opacity: 0.7; width: 6px; height: 6px; }
+.snowflake:nth-of-type(9) { left: 45%; animation-delay: 7s; animation-duration: 11s; opacity: 0.9; width: 7px; height: 7px; }
+.snowflake:nth-of-type(10) { left: 50%; animation-delay: 0.5s; animation-duration: 10s; opacity: 0.6; width: 4px; height: 4px; }
+.snowflake:nth-of-type(11) { left: 55%; animation-delay: 9s; animation-duration: 22s; opacity: 0.8; width: 6px; height: 6px; }
+.snowflake:nth-of-type(12) { left: 60%; animation-delay: 3.5s; animation-duration: 22s; opacity: 0.5; width: 5px; height: 5px; }
+.snowflake:nth-of-type(13) { left: 65%; animation-delay: 6.5s; animation-duration: 19s; opacity: 0.7; width: 6px; height: 6px; }
+.snowflake:nth-of-type(14) { left: 70%; animation-delay: 1s; animation-duration: 11s; opacity: 0.9; width: 7px; height: 7px; }
+.snowflake:nth-of-type(15) { left: 75%; animation-delay: 8.5s; animation-duration: 10s; opacity: 0.6; width: 4px; height: 4px; }
+.snowflake:nth-of-type(16) { left: 80%; animation-delay: 5s; animation-duration: 18s; opacity: 0.8; width: 6px; height: 6px; }
+.snowflake:nth-of-type(17) { left: 85%; animation-delay: 11s; animation-duration: 22s; opacity: 0.5; width: 5px; height: 5px; }
+.snowflake:nth-of-type(18) { left: 90%; animation-delay: 2.5s; animation-duration: 19s; opacity: 0.7; width: 6px; height: 6px; }
+.snowflake:nth-of-type(19) { left: 95%; animation-delay: 7.5s; animation-duration: 11s; opacity: 0.9; width: 7px; height: 7px; }
+.snowflake:nth-of-type(20) { left: 98%; animation-delay: 0s; animation-duration: 150s; opacity: 0.6; width: 4px; height: 4px; }
+.snowflake:nth-of-type(21) { left: 7%; animation-delay: 9s; animation-duration: 22s; opacity: 0.8; width: 6px; height: 6px; }
+.snowflake:nth-of-type(22) { left: 17%; animation-delay: 3.5s; animation-duration: 22s; opacity: 0.5; width: 5px; height: 5px; }
+.snowflake:nth-of-type(23) { left: 27%; animation-delay: 6.5s; animation-duration: 19s; opacity: 0.7; width: 6px; height: 6px; }
+.snowflake:nth-of-type(24) { left: 37%; animation-delay: 1s; animation-duration: 11s; opacity: 0.9; width: 7px; height: 7px; }
+.snowflake:nth-of-type(25) { left: 47%; animation-delay: 8.5s; animation-duration: 10s; opacity: 0.6; width: 4px; height: 4px; }
+.snowflake:nth-of-type(26) { left: 57%; animation-delay: 5s; animation-duration: 18s; opacity: 0.8; width: 6px; height: 6px; }
+.snowflake:nth-of-type(27) { left: 67%; animation-delay: 11s; animation-duration: 22s; opacity: 0.5; width: 5px; height: 5px; }
+.snowflake:nth-of-type(28) { left: 77%; animation-delay: 2.5s; animation-duration: 19s; opacity: 0.7; width: 6px; height: 6px; }
+.snowflake:nth-of-type(29) { left: 87%; animation-delay: 7.5s; animation-duration: 11s; opacity: 0.9; width: 7px; height: 7px; }
+.snowflake:nth-of-type(30) { left: 99%; animation-delay: 0s; animation-duration: 150s; opacity: 0.6; width: 4px; height: 4px; }

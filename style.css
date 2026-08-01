@@ -373,14 +373,13 @@ margin-bottom: 50px;   /* Tạo khoảng cách phía dưới phần tử */}
 
 
 
-/* Gán nền chung cho cụm Section 2, 3, 4, 5, 6 */
+/* Gán nền chung cho cụm Section 2, 3, 4, 5, 6 (Cố định seamless toàn bộ trang) */
 #poster, #slide, #video, #ai-video, #scorm {
     background-image: url('Link_anh/Background2.png') !important;
-    background-attachment: scroll !important; /* Cuộn theo section để tiêu đề luôn nằm ở phần nền tối phía trên và không bị vạch trắng khi cuộn */
+    background-attachment: fixed !important; /* Ảnh đứng yên cố định, nội dung trượt liền mạch lên trên */
     background-size: cover !important;
-    background-position: top center !important;
+    background-position: center !important;
     background-repeat: no-repeat !important;
-    background-color: #050b18 !important; /* Nền tối đồng bộ */
     
     /* Giữ nguyên các thuộc tính hiển thị cũ của bạn */
     display: flex;

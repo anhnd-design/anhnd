@@ -27,12 +27,6 @@ body {
 section {
   scroll-margin-top: 0px;
   min-height: auto;
-  #poster,
-  #slide,
-  #video,
-  #scorm {
-  background-image: url('Link_anh/Background2.png');
-}
   background-size: cover;
   background-position: center;
   color: white;
@@ -73,11 +67,11 @@ section {
 }
 
 .nav-link {
-  margin: 0 30px;
+  margin: 0 18px;
   text-decoration: none;
   color: gray;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 19px;
   transition: color 0.3s ease;
   white-space: nowrap;
 }
@@ -87,21 +81,43 @@ section {
   color: #2380FC;
 }
 
-/* Responsive cho NAVBAR trên Mobile */
+/* Responsive cho NAVBAR trên Mobile & Tablet (Tránh tràn khi có 6 Tab) */
+@media (max-width: 768px) {
+  .nav-inner {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 4px;
+    padding: 0 15px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .nav-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-link {
+    font-size: 15px;
+    padding: 4px 6px;
+    margin: 0 4px;
+    flex-shrink: 0;
+  }
+}
+
 @media (max-width: 480px) {
   .nav-inner {
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: nowrap;
     overflow-x: auto;
     gap: 2px;
-    padding: 0 6px;
+    padding: 0 10px;
   }
 
   .nav-link {
     font-size: 14px;
-    padding: 2px 3px;
+    padding: 2px 4px;
     margin: 0 2px;
-    flex-shrink: 1;
+    flex-shrink: 0;
   }
 }
 
@@ -283,6 +299,21 @@ margin-bottom: 50px;   /* Tạo khoảng cách phía dưới phần tử */}
   }
 }
 
+/* Kiểu Card tỉ lệ 9:16 (Cho AI Video) */
+.card.card-portrait img {
+  height: auto;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .card.card-portrait img {
+    height: auto;
+    aspect-ratio: 9 / 16;
+    display: block;
+  }
+}
+
 /* ===========================
    FOOTER
 =========================== */
@@ -338,8 +369,8 @@ margin-bottom: 50px;   /* Tạo khoảng cách phía dưới phần tử */}
 
 
 
-/* Gán nền chung cho cụm Section 2, 3, 4, 5 */
-#poster, #slide, #video, #scorm {
+/* Gán nền chung cho cụm Section 2, 3, 4, 5, 6 */
+#poster, #slide, #video, #ai-video, #scorm {
     background-image: url('Link_anh/Background2.png') !important;
     background-attachment: fixed !important; /* Ảnh đứng yên, nội dung trượt lên */
     background-size: cover !important;

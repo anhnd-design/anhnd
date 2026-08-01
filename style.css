@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background-color: white;
+  background-color: #050b18;
 }
 
 /* ===========================
@@ -299,18 +299,22 @@ margin-bottom: 50px;   /* Tạo khoảng cách phía dưới phần tử */}
   }
 }
 
-/* Kiểu Card tỉ lệ 9:16 (Cho AI Video) */
+/* Kiểu Card tỉ lệ 9:16 chuẩn chiều dọc (Cho AI Video) */
+.card-portrait img,
 .card.card-portrait img {
-  height: auto;
-  aspect-ratio: 9 / 16;
-  object-fit: cover;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 9 / 16 !important;
+  object-fit: cover !important;
 }
 
 @media (max-width: 768px) {
+  .card-portrait img,
   .card.card-portrait img {
-    height: auto;
-    aspect-ratio: 9 / 16;
-    display: block;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 9 / 16 !important;
+    display: block !important;
   }
 }
 
@@ -372,10 +376,11 @@ margin-bottom: 50px;   /* Tạo khoảng cách phía dưới phần tử */}
 /* Gán nền chung cho cụm Section 2, 3, 4, 5, 6 */
 #poster, #slide, #video, #ai-video, #scorm {
     background-image: url('Link_anh/Background2.png') !important;
-    background-attachment: fixed !important; /* Ảnh đứng yên, nội dung trượt lên */
+    background-attachment: scroll !important; /* Cuộn theo section để tiêu đề luôn nằm ở phần nền tối phía trên và không bị vạch trắng khi cuộn */
     background-size: cover !important;
-    background-position: center !important;
+    background-position: top center !important;
     background-repeat: no-repeat !important;
+    background-color: #050b18 !important; /* Nền tối đồng bộ */
     
     /* Giữ nguyên các thuộc tính hiển thị cũ của bạn */
     display: flex;
